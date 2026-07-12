@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -203,7 +203,7 @@
         <div class="absolute inset-0 bg-gradient-to-br from-space-900 via-space-900/90 to-apexteal-900/60"></div>
         
         <!-- Decorative Roots SVG -->
-        <svg class="absolute right-[-40px] top-[10px] w-64 h-96 opacity-40 pointer-events-none" viewBox="0 0 220 340" fill="none">
+        <svg class="absolute right-0 top-[10px] w-64 h-96 opacity-40 pointer-events-none transform translate-x-12" viewBox="0 0 220 340" fill="none">
             <path d="M180 0 C170 40 190 70 160 100 C130 130 150 160 120 190 C90 220 110 250 80 280 C60 300 65 320 50 340" stroke="#047b8e" stroke-width="1.6" opacity="0.55"/>
             <path d="M160 100 C140 105 125 95 110 115" stroke="#047b8e" stroke-width="1.2" opacity="0.4"/>
             <path d="M120 190 C100 195 90 185 75 200" stroke="#047b8e" stroke-width="1.2" opacity="0.4"/>
@@ -212,6 +212,28 @@
             <circle cx="120" cy="190" r="3" fill="#047b8e"/>
             <circle cx="50" cy="340" r="3" fill="#047b8e"/>
         </svg>
+
+        <!-- Parallax Image 34.png -->
+        <img src="34.png" id="hero-parallax" alt="Decorative background" class="absolute -right-12 md:right-[5%] lg:right-[10%] top-[15%] md:top-[20%] w-64 md:w-96 lg:w-[450px] opacity-100 pointer-events-none z-0 transition-transform duration-75 ease-out">
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const heroParallax = document.getElementById('hero-parallax');
+                if (heroParallax) {
+                    let tick = false;
+                    window.addEventListener('scroll', () => {
+                        if (!tick) {
+                            window.requestAnimationFrame(() => {
+                                // Move down as user scrolls
+                                heroParallax.style.transform = `translateY(${window.scrollY * 0.35}px)`;
+                                tick = false;
+                            });
+                            tick = true;
+                        }
+                    });
+                }
+            });
+        </script>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-2xl">
@@ -936,6 +958,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
