@@ -173,16 +173,16 @@
             
             <!-- Links -->
             <div class="flex flex-col items-center gap-4 md:gap-5 relative z-10 mt-2">
-                <a href="index.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Home</a>
-                <a href="index.html#services" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Services</a>
-                <a href="about.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">About</a>
+                <a href="index.html" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Home</a>
+                <a href="index.html#services" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Services</a>
+                <a href="about.html" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">About</a>
                 
                 <!-- Therapies Accordion/Group (Compact) -->
                 <div class="flex flex-col items-center gap-2 md:gap-3 bg-slate-50/80 backdrop-blur-sm w-full py-3 rounded-2xl border border-slate-100/50 shadow-inner">
                     <span class="text-xs font-bold text-apexteal-500 uppercase tracking-widest">Therapies</span>
-                    <a href="eboo.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO</a>
-                    <a href="ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBO2</a>
-                    <a href="eboo-vs-ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO vs EBO2</a>
+                    <a href="eboo.html" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO</a>
+                    <a href="ebo2.html" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBO2</a>
+                    <a href="eboo-vs-ebo2.html" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO vs EBO2</a>
                 </div>
                 
                 <a href="testimonials.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Testimonials</a>
@@ -213,8 +213,8 @@
             <circle cx="50" cy="340" r="3" fill="#047b8e"/>
         </svg>
 
-        <!-- Parallax Image 34.png -->
-        <img src="34.png" id="hero-parallax" alt="Decorative background" class="absolute -right-12 md:right-0 lg:right-[5%] top-[5%] md:top-[10%] w-[550px] md:w-[600px] lg:w-[850px] opacity-100 pointer-events-none z-0 transition-transform duration-75 ease-out origin-right">
+        <!-- Parallax Plant -->
+        <img src="sprout_parallax.png" id="hero-parallax" alt="Sprouting plant" class="hidden md:block absolute md:right-0 lg:right-[5%] bottom-0 translate-y-[20%] md:w-[450px] lg:w-[600px] opacity-80 pointer-events-none z-0 mix-blend-screen transition-transform duration-75 ease-out origin-bottom">
         
         <script>
             document.addEventListener("DOMContentLoaded", () => {
@@ -225,9 +225,9 @@
                         if (!tick) {
                             window.requestAnimationFrame(() => {
                                 const scrollY = window.scrollY;
-                                // Move down and scale up as user scrolls
-                                const scale = 1 + (scrollY * 0.0015);
-                                heroParallax.style.transform = `translateY(${scrollY * 0.35}px) scale(${scale})`;
+                                // Gentle upward sprouting effect, starting from 20% below
+                                const scale = 1 + (scrollY * 0.001);
+                                heroParallax.style.transform = `translateY(calc(20% - ${scrollY * 0.15}px)) scale(${scale})`;
                                 tick = false;
                             });
                             tick = true;
@@ -247,8 +247,13 @@
                     Integrative &amp; functional medicine for complex chronic health concerns — guided by experience, compassion, and a legacy of trusted care.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#services" class="bg-apexteal-500 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-400 transition-all">Request an Appointment</a>
-                    <a href="tel:9419556220" class="border-2 border-slate-500/50 text-white font-bold py-4 px-8 rounded-full hover:border-white transition-all backdrop-blur-sm">Call the Office</a>
+                    <a href="#contact" class="bg-apexteal-500 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-400 transition-all">Request an Appointment</a>
+                    
+                    <!-- Mobile: Dials phone -->
+                    <a href="tel:9419556220" class="md:hidden border-2 border-slate-500/50 text-white font-bold py-4 px-8 rounded-full hover:border-white transition-all backdrop-blur-sm">Call the Office</a>
+                    
+                    <!-- Desktop: Scrolls to contact -->
+                    <a href="#contact" class="hidden md:inline-flex items-center justify-center border-2 border-slate-500/50 text-white font-bold py-4 px-8 rounded-full hover:border-white transition-all backdrop-blur-sm">Call the Office</a>
                 </div>
             </div>
         </div>
@@ -258,9 +263,42 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-20 mb-16">
         <div class="bg-white rounded-[2rem] shadow-2xl p-6 md:p-8 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-100 border border-slate-100">
             <div class="flex-1 text-center p-4">
-                <div class="text-4xl font-serif text-space-900 font-bold mb-2">25+</div>
+                <div class="text-4xl font-serif text-space-900 font-bold mb-2"><span id="counter-25">0</span>+</div>
                 <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Years in Functional Medicine</div>
             </div>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const counter = document.getElementById("counter-25");
+                    if (counter) {
+                        const target = 25;
+                        const duration = 2000; // 2 seconds
+                        
+                        const observer = new IntersectionObserver((entries) => {
+                            if (entries[0].isIntersecting) {
+                                let startTimestamp = null;
+                                const step = (timestamp) => {
+                                    if (!startTimestamp) startTimestamp = timestamp;
+                                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                                    // easeOutQuart easing function for a smooth slowdown at the end
+                                    const easeProgress = 1 - Math.pow(1 - progress, 4);
+                                    counter.innerText = Math.floor(easeProgress * target);
+                                    if (progress < 1) {
+                                        window.requestAnimationFrame(step);
+                                    } else {
+                                        counter.innerText = target;
+                                    }
+                                };
+                                window.requestAnimationFrame(step);
+                                observer.disconnect(); // Only animate once
+                            }
+                        }, { threshold: 0.1 });
+                        
+                        observer.observe(counter);
+                    }
+                });
+            </script>
+            
             <div class="flex-1 text-center p-4">
                 <div class="text-4xl font-serif text-space-900 font-bold mb-2">ILADS</div>
                 <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Trained Lyme Physician</div>
