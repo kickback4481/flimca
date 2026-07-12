@@ -213,8 +213,8 @@
             <circle cx="50" cy="340" r="3" fill="#047b8e"/>
         </svg>
 
-        <!-- Parallax Image 34.png -->
-        <img src="34.png" id="hero-parallax" alt="Decorative background" class="absolute -right-12 md:right-0 lg:right-[5%] top-[5%] md:top-[10%] w-[550px] md:w-[600px] lg:w-[850px] opacity-100 pointer-events-none z-0 transition-transform duration-75 ease-out origin-right">
+        <!-- Parallax Plant -->
+        <img src="sprout_parallax.png" id="hero-parallax" alt="Sprouting plant" class="absolute -right-4 md:right-0 lg:right-[5%] top-[15%] md:top-[20%] w-[350px] md:w-[450px] lg:w-[600px] opacity-80 pointer-events-none z-0 mix-blend-screen transition-transform duration-75 ease-out origin-bottom">
         
         <script>
             document.addEventListener("DOMContentLoaded", () => {
@@ -225,9 +225,9 @@
                         if (!tick) {
                             window.requestAnimationFrame(() => {
                                 const scrollY = window.scrollY;
-                                // Move down and scale up as user scrolls
-                                const scale = 1 + (scrollY * 0.0015);
-                                heroParallax.style.transform = `translateY(${scrollY * 0.35}px) scale(${scale})`;
+                                // Gentle upward sprouting effect
+                                const scale = 1 + (scrollY * 0.001);
+                                heroParallax.style.transform = `translateY(${scrollY * -0.15}px) scale(${scale})`;
                                 tick = false;
                             });
                             tick = true;
@@ -247,8 +247,13 @@
                     Integrative &amp; functional medicine for complex chronic health concerns — guided by experience, compassion, and a legacy of trusted care.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#services" class="bg-apexteal-500 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-400 transition-all">Request an Appointment</a>
-                    <a href="tel:9419556220" class="border-2 border-slate-500/50 text-white font-bold py-4 px-8 rounded-full hover:border-white transition-all backdrop-blur-sm">Call the Office</a>
+                    <a href="#contact" class="bg-apexteal-500 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-400 transition-all">Request an Appointment</a>
+                    
+                    <!-- Mobile: Dials phone -->
+                    <a href="tel:9419556220" class="md:hidden border-2 border-slate-500/50 text-white font-bold py-4 px-8 rounded-full hover:border-white transition-all backdrop-blur-sm">Call the Office</a>
+                    
+                    <!-- Desktop: Scrolls to contact -->
+                    <a href="#contact" class="hidden md:inline-flex items-center justify-center border-2 border-slate-500/50 text-white font-bold py-4 px-8 rounded-full hover:border-white transition-all backdrop-blur-sm">Call the Office</a>
                 </div>
             </div>
         </div>
