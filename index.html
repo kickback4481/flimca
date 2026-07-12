@@ -214,7 +214,11 @@
         </svg>
 
         <!-- Parallax Plant -->
+<<<<<<< HEAD
         <img src="sprout_parallax.png" id="hero-parallax" alt="Sprouting plant" class="hidden md:block absolute md:right-0 lg:right-[5%] bottom-0 translate-y-[20%] md:w-[450px] lg:w-[600px] opacity-80 pointer-events-none z-0 mix-blend-screen transition-transform duration-75 ease-out origin-bottom">
+=======
+<img src="sprout_parallax.png" id="hero-parallax" alt="Sprouting plant" class="absolute -right-4 md:right-0 lg:right-[5%] bottom-0 translate-y-[20%] w-[350px] md:w-[450px] lg:w-[600px] opacity-80 pointer-events-none z-0 mix-blend-screen transition-transform duration-75 ease-out origin-bottom">
+>>>>>>> 1729032cc99cc22d5684d216be6b762c39e12ddb
         
         <script>
             document.addEventListener("DOMContentLoaded", () => {
@@ -225,9 +229,15 @@
                         if (!tick) {
                             window.requestAnimationFrame(() => {
                                 const scrollY = window.scrollY;
+<<<<<<< HEAD
                                 // Gentle upward sprouting effect, starting from 20% below
                                 const scale = 1 + (scrollY * 0.001);
                                 heroParallax.style.transform = `translateY(calc(20% - ${scrollY * 0.15}px)) scale(${scale})`;
+=======
+// Gentle upward sprouting effect, starting from 20% below
+const scale = 1 + (scrollY * 0.001);
+heroParallax.style.transform = `translateY(calc(20% - ${scrollY * 0.15}px)) scale(${scale})`;
+>>>>>>> 1729032cc99cc22d5684d216be6b762c39e12ddb
                                 tick = false;
                             });
                             tick = true;
