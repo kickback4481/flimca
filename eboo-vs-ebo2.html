@@ -3,174 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Therapy Comparison | FLIMC</title>
-    <meta name="description" content="Learn more about Therapy Comparison at Florida Integrative Medical Center (FLIMC) in Sarasota, Florida.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>EBOO VS EBO2 - Apex Antigravity & Recovery Center</title>
+    <meta name="description" content="What is the difference between EBOO and EBO2? Advanced integrative therapy at Florida Integrative Medical Center.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .text-space-900 { color: #0f172a; }
+        .bg-space-900 { background-color: #0f172a; }
+        .bg-space-800 { background-color: #1e293b; }
+        .text-apexteal-400 { color: #5ac6d6; }
+        .bg-apexteal-500 { background-color: #047b8e; }
+        .border-space-700 { border-color: #334155; }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo.png" alt="FLIMC Logo">
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                <img src="logo.png" alt="Florida Integrative Medical Center" class="h-20 w-auto object-contain">
             </a>
-            <div class="nav-links">
-                <a href="about.html">About</a>
-                <a href="index.html#services">Services</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="https://flimc.myshopify.com/" target="_blank">Supplements</a>
-                <div class="dropdown" tabindex="0" onclick="this.classList.toggle('active')" onkeypress="if(event.key==='Enter') this.classList.toggle('active')">
-                    <a href="index.html#therapies" style="cursor: pointer;">Therapies</a>
-                    <div class="dropdown-menu">
-                        <a href="iv-therapies.html">IV & Infusion Therapies</a>
-                        <a href="ozone-therapy.html">Ozone Therapy</a>
-                        <a href="ubi-therapy.html">UBI Therapy</a>
-                        <a href="eboo-therapy.html">EBOO Therapy</a>
-                        <a href="ebo2-therapy.html">EBO&#8322; Therapy</a>
-                        <a href="eboo-vs-ebo2.html">EBOO vs EBO&#8322;</a>
+            
+            <!-- Navigation (Desktop) -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Home</a>
+                <a href="index.html#services" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Services</a>
+                <a href="about.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">About</a>
+                <a href="testimonials.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Testimonials</a>
+                <div class="relative group">
+                    <a href="index.html#therapies" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide flex items-center gap-1">Therapies <i class="fa-solid fa-chevron-down text-xs"></i></a>
+                    <div class="absolute left-0 mt-4 w-48 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                        <a href="eboo.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBOO</a>
+                        <a href="ebo2.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBO2</a>
+                        <a href="eboo-vs-ebo2.html" class="block px-4 py-2 text-sm text-apexteal-500 font-medium">EBOO vs EBO2</a>
                     </div>
                 </div>
-                <a href="index.html#process">How it Works</a>
-                <a href="index.html#faq">FAQ</a>
+                <a href="https://flimc.myshopify.com/" target="_blank" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Supplements</a>
+                <a href="index.html#contact" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Contact</a>
+            </nav>
+
+            <!-- Call to Action -->
+            <div class="hidden lg:flex items-center">
+                <span class="text-white font-bold text-lg bg-apexteal-500 px-6 py-3 rounded-full shadow-md shadow-apexteal-500/20 hover:bg-apexteal-400 transition-colors cursor-pointer">
+                    <i class="fa-solid fa-phone mr-2"></i> (941) 955-6220
+                </span>
             </div>
-            <div class="nav-actions">
-                <a href="mailto:Info@flimc.com" class="btn btn-primary">Book Appointment</a>
+            
+                                                            <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.remove('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.add('overflow-hidden');" class="text-space-900 hover:text-apexteal-500 focus:outline-none transition-all">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
             </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+    </header>
+        
+    <!-- 10x Better Mobile Menu (Centered Modal) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none scale-95 transition-all duration-300 md:hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-space-900/80 backdrop-blur-md" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');"></div>
+        
+        <!-- Menu Card -->
+        <div class="relative w-full max-w-sm bg-white rounded-[2rem] shadow-2xl p-6 md:p-8 overflow-hidden">
+            <!-- Decorative Shapes in Background -->
+            <div class="absolute -top-16 -right-16 w-48 h-48 bg-apexteal-300/30 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-16 -left-16 w-48 h-48 bg-apexteal-500/20 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <!-- Close Button -->
+            <button onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-apexteal-50 hover:text-apexteal-500 transition-colors z-10 border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-xmark text-xl"></i>
             </button>
-        </div>
-                        </nav>
-    <!-- Mobile Nav Overlay -->
-        <div class="mobile-nav">
-            <div class="mobile-nav-inner">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="index.html#services">Services</a>
-                <div class="dropdown" tabindex="0" onclick="this.classList.toggle('active')" onkeypress="if(event.key==='Enter') this.classList.toggle('active')">
-                    <a style="cursor: pointer;">Therapies</a>
-                    <div class="dropdown-menu">
-                        <a href="iv-therapies.html">IV & Infusion Therapies</a>
-                        <a href="ozone-therapy.html">Ozone Therapy</a>
-                        <a href="ubi-therapy.html">UBI Therapy</a>
-                        <a href="eboo-therapy.html">EBOO</a>
-                        <a href="ebo2-therapy.html">EBO&#8322;</a>
-                        <a href="eboo-vs-ebo2.html">EBOO vs EBO&#8322;</a>
-                    </div>
+            
+            <!-- Links -->
+            <div class="flex flex-col items-center gap-4 md:gap-5 relative z-10 mt-2">
+                <a href="index.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Home</a>
+                <a href="index.html#services" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Services</a>
+                <a href="about.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">About</a>
+                
+                <!-- Therapies Accordion/Group (Compact) -->
+                <div class="flex flex-col items-center gap-2 md:gap-3 bg-slate-50/80 backdrop-blur-sm w-full py-3 rounded-2xl border border-slate-100/50 shadow-inner">
+                    <span class="text-xs font-bold text-apexteal-500 uppercase tracking-widest">Therapies</span>
+                    <a href="eboo.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO</a>
+                    <a href="ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBO2</a>
+                    <a href="eboo-vs-ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO vs EBO2</a>
                 </div>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="index.html#process">How it Works</a>
-                <a href="index.html#faq">FAQ</a>
-                <a href="https://flimc.myshopify.com/" target="_blank">Supplements</a>
-                <a href="mailto:Info@flimc.com" class="btn btn-primary">Book Appointment</a>
+                
+                <a href="testimonials.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Testimonials</a>
+                <a href="https://flimc.myshopify.com/" target="_blank" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Shop</a>
+                <a href="index.html#contact" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Contact</a>
+                
+                <!-- CTA -->
+                <a href="tel:9419556220" class="mt-1 w-full flex items-center justify-center gap-2 bg-apexteal-500 text-white font-bold py-3 md:py-4 rounded-xl shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-600 transition-all">
+                    <i class="fa-solid fa-phone"></i> (941) 955-6220
+                </a>
             </div>
         </div>
+    </div>
 
     <!-- Hero Section -->
-    <section class="page-hero-section">
-        <div class="container scroll-fade-up">
-            <h1 class="page-hero-title">Therapy Comparison</h1>
-            <p class="page-hero-subtitle">Understanding the Difference: EBOO vs EBO₂</p>
+    <section class="py-16 bg-space-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">EBOO vs EBO2</h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">What Is the Difference?</p>
         </div>
     </section>
 
     <!-- Main Content -->
-    <section class="page-content-section">
-        <div class="container page-content-container">
-            <div class="glass-card scroll-fade-up" style="padding: 0; overflow: hidden; margin-bottom: 2.5rem; text-align: center;">
-                <img src="EBOO%20VS%20EBO2.png" alt="EBOO vs EBO2" style="width: 100%; height: auto; max-height: 600px; display: block; object-fit: cover; border-radius: var(--border-radius);">
-            </div>
-            <div class="glass-card scroll-fade-up page-glass-card">
-                <h2 class="page-content-h2">What Is the Difference Between EBOO and EBO₂?</h2>
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 prose prose-lg text-slate-700 max-w-none">
+                <h2 class="text-3xl font-bold text-space-900 mb-6">What Is the Difference Between EBOO and EBO2?</h2>
                 
-                <p class="page-content-p">
-                    Both EBOO (Extracorporeal Blood Oxygenation & Ozonation) and EBO₂ (Extracorporeal Blood Oxygenation & Ozonation) are advanced, physician-guided wellness therapies that circulate blood outside the body through a specialized medical system where it is exposed to medical-grade oxygen and ozone before being returned to the bloodstream. Both therapies are designed to support healthy circulation, oxygen utilization, immune function, and overall physiological wellness as part of a personalized integrative care plan.
-                </p>
-
-                <p class="page-content-p">
-                    While the therapies share many similarities, they differ in their design, filtration capabilities, blood-processing volume, and overall intensity.
-                </p>
-
-                <h3 style="color: var(--brand-dark); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">EBOO</h3>
-                <p class="page-content-p">
-                    EBOO is an advanced ozone wellness therapy that continuously circulates blood through a specialized extracorporeal system where it is oxygenated, exposed to medical-grade ozone, and returned to the body. It is designed to support healthy circulation, oxygen delivery, cellular wellness, and the body’s natural detoxification processes. EBOO provides comprehensive ozone and oxygen support while processing a significant volume of blood during each physician-guided session.
-                </p>
-
-                <h3 style="color: var(--brand-dark); margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem;">EBO₂</h3>
-                <p class="page-content-p">
-                    EBO₂ builds upon these same core principles while incorporating an advanced high-performance blood filtration system. As blood continuously circulates through the extracorporeal circuit, it is filtered, oxygenated, and precisely exposed to medical-grade ozone before being returned to the body. This additional filtration component is designed to help reduce the burden of unwanted particles that may accumulate in the bloodstream while supporting healthy circulation, oxygen delivery, and overall physiological balance.
-                </p>
-
-                <h3 style="color: var(--brand-dark); margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.5rem;">Key Differences</h3>
+                <p>Both EBOO (Extracorporeal Blood Oxygenation & Ozonation) and EBO₂ (Extracorporeal Blood Oxygenation & Ozonation) are advanced, physician-guided wellness therapies that circulate blood outside the body through a specialized medical system where it is exposed to medical-grade oxygen and ozone before being returned to the bloodstream. Both therapies are designed to support healthy circulation, oxygen utilization, immune function, and overall physiological wellness as part of a personalized integrative care plan.</p>
                 
-                <ul style="margin-bottom: 2.5rem; line-height: 1.8; color: var(--text-secondary); list-style-type: none; padding-left: 0;">
-                    <li style="margin-bottom: 1rem;"><strong>Filtration:</strong> EBO₂ incorporates advanced blood filtration as part of the procedure, while traditional EBOO focuses primarily on oxygenation and ozonation.</li>
-                    <li style="margin-bottom: 1rem;"><strong>Blood Processing:</strong> EBO₂ is designed to process a larger volume of blood through a continuous filtration circuit during the session.</li>
-                    <li style="margin-bottom: 1rem;"><strong>Technology:</strong> EBO₂ utilizes a larger, more advanced extracorporeal filtration system capable of combining filtration, oxygenation, and ozonation into one continuous process.</li>
-                    <li style="margin-bottom: 1rem;"><strong>Personalization:</strong> Both therapies are individualized and performed under physician supervision using customized protocols based on each patient’s health history, wellness goals, and overall care plan.</li>
+                <p>While the therapies share many similarities, they differ in their design, filtration capabilities, blood-processing volume, and overall intensity.</p>
+                
+                <h3 class="text-2xl font-bold text-space-900 mt-10 mb-4">EBOO</h3>
+                <p>EBOO is an advanced ozone wellness therapy that continuously circulates blood through a specialized extracorporeal system where it is oxygenated, exposed to medical-grade ozone, and returned to the body. It is designed to support healthy circulation, oxygen delivery, cellular wellness, and the body’s natural detoxification processes. EBOO provides comprehensive ozone and oxygen support while processing a significant volume of blood during each physician-guided session.</p>
+
+                <h3 class="text-2xl font-bold text-space-900 mt-10 mb-4">EBO₂</h3>
+                <p>EBO₂ builds upon these same core principles while incorporating an advanced high-performance blood filtration system. As blood continuously circulates through the extracorporeal circuit, it is filtered, oxygenated, and precisely exposed to medical-grade ozone before being returned to the body. This additional filtration component is designed to help reduce the burden of unwanted particles that may accumulate in the bloodstream while supporting healthy circulation, oxygen delivery, and overall physiological balance.</p>
+
+                <h3 class="text-2xl font-bold text-space-900 mt-10 mb-6">Key Differences</h3>
+                
+                <ul class="space-y-4 mb-10">
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-apexteal-500 mt-1"></i> <span><strong>Filtration:</strong> EBO₂ incorporates advanced blood filtration as part of the procedure, while traditional EBOO focuses primarily on oxygenation and ozonation.</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-apexteal-500 mt-1"></i> <span><strong>Blood Processing:</strong> EBO₂ is designed to process a larger volume of blood through a continuous filtration circuit during the session.</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-apexteal-500 mt-1"></i> <span><strong>Technology:</strong> EBO₂ utilizes a larger, more advanced extracorporeal filtration system capable of combining filtration, oxygenation, and ozonation into one continuous process.</span></li>
+                    <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-apexteal-500 mt-1"></i> <span><strong>Personalization:</strong> Both therapies are individualized and performed under physician supervision using customized protocols based on each patient’s health history, wellness goals, and overall care plan.</span></li>
                 </ul>
 
-                <h3 style="color: var(--brand-dark); margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.5rem;">Which Therapy Is Right for You?</h3>
-                
-                <p class="page-content-p">
-                    Neither therapy is considered universally better than the other. Each offers unique advantages, and the most appropriate option depends on your individual health history, wellness objectives, physician evaluation, and personalized wellness plan.
-                </p>
+                <h3 class="text-2xl font-bold text-space-900 mt-10 mb-4">Which Therapy Is Right for You?</h3>
+                <p>Neither therapy is considered universally better than the other. Each offers unique advantages, and the most appropriate option depends on your individual health history, wellness objectives, physician evaluation, and personalized wellness plan.</p>
 
-                <p class="page-content-p">
-                    At Florida Integrative Medical Center, our physicians perform a comprehensive consultation to determine which therapy—or combination of therapies—may best complement your personalized integrative wellness program. Every recommendation is tailored to your individual needs, with the goal of supporting your body’s natural physiological functions and helping you achieve your long-term wellness goals.
-                </p>
-
+                <div class="bg-apexteal-50 p-6 rounded-xl border border-apexteal-200 mt-10">
+                    <p class="font-medium text-space-900 mb-0">At Florida Integrative Medical Center, our physicians perform a comprehensive consultation to determine which therapy or combination of therapies may best complement your personalized integrative wellness program. Every recommendation is tailored to your individual needs, with the goal of supporting your body’s natural physiological functions and helping you achieve your long-term wellness goals. <a href="index.html#contact" class="text-apexteal-600 font-bold underline">Contact us today to schedule your consultation.</a></p>
+                </div>
             </div>
         </div>
     </section>
 
-<footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo-170x-e1746037843962.png" alt="FLIMC Logo">
+    <!-- Footer -->
+    <footer id="contact">
+        <!-- Main Contact Bar (#5ac6d6) -->
+        <div class="bg-apexteal-400 pt-16 pb-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center">
+                    <!-- Logo -->
+                    <div class="mb-6 flex justify-center">
+                        <img src="logo.png" alt="Florida Integrative Medical Center" class="h-32 w-auto object-contain drop-shadow-md">
                     </div>
-                    <p>Florida Integrative Medical Center provides natural supplements and holistic health solutions, supporting your wellness journey with science-backed care and integrative therapies.</p>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>Have a question? Reach out to our team for an answer!</p>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" ><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-                        <div>
-                            <p>2415 University Parkway, Suite 218, Sarasota, Florida 34243, United States</p>
-                            <a href="https://g.co/kgs/5BnAE13" target="_blank">Directions</a>
+                    
+                    <!-- Social Media -->
+                    <div class="flex space-x-4 mb-8">
+                        <a href="https://www.facebook.com/FLIMC/" target="_blank" class="w-10 h-10 rounded-full bg-space-900 flex items-center justify-center text-white hover:bg-white hover:text-apexteal-500 transition-all shadow-md">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/flimcsarasota" target="_blank" class="w-10 h-10 rounded-full bg-space-900 flex items-center justify-center text-white hover:bg-white hover:text-apexteal-500 transition-all shadow-md">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <!-- Mission Statement -->
+                    <div class="max-w-3xl text-center mb-10">
+                        <p class="text-space-900 font-medium text-lg leading-relaxed italic">
+                            Florida Integrative Medical Center provides natural supplements and holistic health solutions, supporting your wellness journey with science-backed care and integrative therapies.
+                        </p>
+                    </div>
+
+                    <!-- Contact Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mt-4 border-t border-space-900/10 pt-10">
+                        <div class="text-center">
+                            <i class="fa-solid fa-phone text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Phone Number</h4>
+                            <p class="text-space-900 text-xl font-bold">(941) 955-6220</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                        <a href="tel:9419556220">(941) 955-6220</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                        <a href="mailto:Info@flimc.com">Info@flimc.com</a>
+                        <div class="text-center">
+                            <i class="fa-solid fa-envelope text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Email Address</h4>
+                            <p class="text-space-900 font-bold text-lg cursor-pointer hover:text-white transition-colors">Info@flimc.com</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-location-dot text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Office Location</h4>
+                            <p class="text-space-900 font-medium leading-relaxed">2415 University Parkway, Suite 218,<br>Sarasota, Florida 34243, United States</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Florida Integrative Medical Center. All rights reserved.</p>
+        </div>
+
+        <!-- Copyright Footer (#047b8e) -->
+        <div class="bg-apexteal-500 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center text-sm text-white flex flex-col md:flex-row gap-3 items-center justify-center font-medium">
+                    <p>Copyright &copy; Flimc 2026. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- Custom JS -->
-    <script src="script.js"></script>
 </body>
 </html>

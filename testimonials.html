@@ -3,292 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Testimonials | FLIMC</title>
-    <meta name="description" content="Learn more about Patient Testimonials at Florida Integrative Medical Center (FLIMC) in Sarasota, Florida.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Testimonials - Apex Antigravity & Recovery Center</title>
+    <meta name="description" content="Read success stories from our patients who have experienced life-changing recoveries at Apex Antigravity & Recovery Center.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .text-space-900 { color: #0f172a; }
+        .bg-space-900 { background-color: #0f172a; }
+        .bg-space-800 { background-color: #1e293b; }
+        .text-apexteal-400 { color: #5ac6d6; }
+        .bg-apexteal-500 { background-color: #047b8e; }
+        .border-space-700 { border-color: #334155; }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo.png" alt="FLIMC Logo">
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                <img src="logo.png" alt="Florida Integrative Medical Center" class="h-20 w-auto object-contain">
             </a>
-            <div class="nav-links">
-                <a href="about.html">About</a>
-                <a href="index.html#services">Services</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="https://flimc.myshopify.com/" target="_blank">Supplements</a>
-                <div class="dropdown" tabindex="0" onclick="this.classList.toggle('active')" onkeypress="if(event.key==='Enter') this.classList.toggle('active')">
-                    <a href="index.html#therapies" style="cursor: pointer;">Therapies</a>
-                    <div class="dropdown-menu">
-                        <a href="iv-therapies.html">IV & Infusion Therapies</a>
-                        <a href="ozone-therapy.html">Ozone Therapy</a>
-                        <a href="ubi-therapy.html">UBI Therapy</a>
-                        <a href="eboo-therapy.html">EBOO Therapy</a>
-                        <a href="ebo2-therapy.html">EBO&#8322; Therapy</a>
-                        <a href="eboo-vs-ebo2.html">EBOO vs EBO&#8322;</a>
+            
+            <!-- Navigation (Desktop) -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Home</a>
+                <a href="index.html#services" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Services</a>
+                <a href="about.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">About</a>
+                <a href="testimonials.html" class="text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Testimonials</a>
+                <div class="relative group">
+                    <a href="index.html#therapies" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide flex items-center gap-1">Therapies <i class="fa-solid fa-chevron-down text-xs"></i></a>
+                    <div class="absolute left-0 mt-4 w-48 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                        <a href="eboo.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBOO</a>
+                        <a href="ebo2.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBO2</a>
+                        <a href="eboo-vs-ebo2.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBOO vs EBO2</a>
                     </div>
                 </div>
-                <a href="index.html#process">How it Works</a>
-                <a href="index.html#faq">FAQ</a>
+                <a href="https://flimc.myshopify.com/" target="_blank" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Supplements</a>
+                <a href="index.html#contact" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Contact</a>
+            </nav>
+
+            <!-- Call to Action -->
+            <div class="hidden lg:flex items-center">
+                <span class="text-white font-bold text-lg bg-apexteal-500 px-6 py-3 rounded-full shadow-md shadow-apexteal-500/20 hover:bg-apexteal-400 transition-colors cursor-pointer">
+                    <i class="fa-solid fa-phone mr-2"></i> (941) 955-6220
+                </span>
             </div>
-            <div class="nav-actions">
-                <a href="mailto:Info@flimc.com" class="btn btn-primary">Book Appointment</a>
+            
+                                                            <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.remove('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.add('overflow-hidden');" class="text-space-900 hover:text-apexteal-500 focus:outline-none transition-all">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
             </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+    </header>
+        
+    <!-- 10x Better Mobile Menu (Centered Modal) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none scale-95 transition-all duration-300 md:hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-space-900/80 backdrop-blur-md" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');"></div>
+        
+        <!-- Menu Card -->
+        <div class="relative w-full max-w-sm bg-white rounded-[2rem] shadow-2xl p-6 md:p-8 overflow-hidden">
+            <!-- Decorative Shapes in Background -->
+            <div class="absolute -top-16 -right-16 w-48 h-48 bg-apexteal-300/30 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-16 -left-16 w-48 h-48 bg-apexteal-500/20 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <!-- Close Button -->
+            <button onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-apexteal-50 hover:text-apexteal-500 transition-colors z-10 border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-xmark text-xl"></i>
             </button>
-        </div>
-                        </nav>
-    <!-- Mobile Nav Overlay -->
-        <div class="mobile-nav">
-            <div class="mobile-nav-inner">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="index.html#services">Services</a>
-                <div class="dropdown" tabindex="0" onclick="this.classList.toggle('active')" onkeypress="if(event.key==='Enter') this.classList.toggle('active')">
-                    <a style="cursor: pointer;">Therapies</a>
-                    <div class="dropdown-menu">
-                        <a href="iv-therapies.html">IV & Infusion Therapies</a>
-                        <a href="ozone-therapy.html">Ozone Therapy</a>
-                        <a href="ubi-therapy.html">UBI Therapy</a>
-                        <a href="eboo-therapy.html">EBOO</a>
-                        <a href="ebo2-therapy.html">EBO&#8322;</a>
-                        <a href="eboo-vs-ebo2.html">EBOO vs EBO&#8322;</a>
-                    </div>
+            
+            <!-- Links -->
+            <div class="flex flex-col items-center gap-4 md:gap-5 relative z-10 mt-2">
+                <a href="index.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Home</a>
+                <a href="index.html#services" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Services</a>
+                <a href="about.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">About</a>
+                
+                <!-- Therapies Accordion/Group (Compact) -->
+                <div class="flex flex-col items-center gap-2 md:gap-3 bg-slate-50/80 backdrop-blur-sm w-full py-3 rounded-2xl border border-slate-100/50 shadow-inner">
+                    <span class="text-xs font-bold text-apexteal-500 uppercase tracking-widest">Therapies</span>
+                    <a href="eboo.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO</a>
+                    <a href="ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBO2</a>
+                    <a href="eboo-vs-ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO vs EBO2</a>
                 </div>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="index.html#process">How it Works</a>
-                <a href="index.html#faq">FAQ</a>
-                <a href="https://flimc.myshopify.com/" target="_blank">Supplements</a>
-                <a href="mailto:Info@flimc.com" class="btn btn-primary">Book Appointment</a>
+                
+                <a href="testimonials.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Testimonials</a>
+                <a href="https://flimc.myshopify.com/" target="_blank" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Shop</a>
+                <a href="index.html#contact" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Contact</a>
+                
+                <!-- CTA -->
+                <a href="tel:9419556220" class="mt-1 w-full flex items-center justify-center gap-2 bg-apexteal-500 text-white font-bold py-3 md:py-4 rounded-xl shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-600 transition-all">
+                    <i class="fa-solid fa-phone"></i> (941) 955-6220
+                </a>
             </div>
         </div>
+    </div>
 
     <!-- Hero Section -->
-    <section class="page-hero-section">
-        <div class="container scroll-fade-up">
-            <h1 class="page-hero-title">Patient Testimonials</h1>
-            <p class="page-hero-subtitle">Read about the experiences of our patients and how integrative medicine has supported their wellness journey.</p>
+    <section class="py-16 bg-space-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Patient Success Stories</h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Real stories of hope, healing, and recovery from the people we serve every day.</p>
         </div>
     </section>
 
-    <!-- Disclaimer -->
-    <section style="padding: 0 0 2rem; text-align: center;">
-        <div class="container">
-            <p style="font-size: 0.9rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto; font-style: italic;">
-                Results described in patient testimonials are individual experiences and may vary. Testimonials do not constitute medical claims or guarantees of outcomes and should not be interpreted as promises of efficacy.
-            </p>
-        </div>
-    </section>
-
-    <!-- Testimonials Grid -->
-    <section class="testimonials-section page-content-section">
-        <div class="container">
+    <!-- Testimonials List -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
-    <div id="testimonial-overlay" class="testimonial-overlay" onclick="closeExpanded()"></div>
-    
-<div class="testimonials-grid-wrapper">
-                <div class="glass-card testimonial-card scroll-fade-up" id="testimonial-0">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/05/Courtney-340x340-1.webp" alt="Courtney H." class="testimonial-avatar">
-                        <p class="testimonial-author">Courtney H.</p>
+            <!-- Courtney H. -->
+            <div id="courtney" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+                    <img src="courtney.jpg" alt="Courtney H." class="w-32 h-32 rounded-full object-cover border-4 border-slate-100 shadow-lg">
+                    <div>
+                        <div class="flex text-apexteal-500 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-space-900">Courtney H.</h2>
                     </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "Florida Integrative Medical Center gave me my life back. I’m not exaggerating. Before I came to FLIMC and got SOT, I was nearly bedridden. I couldn’t function and was suffering terribly from Lyme and co-infections. I was in denial that I was even sick because I’d tried treatment after treatment with no results. And then I met Anna at FLIMC and she really validated what I was going through when no other doctor or medical professional would.<br><br>As I’ve come for treatments at FLIMC, I’ve come to find that everyone is just as hospitable. They not only listen to me but they really fight for me. I have never met finer doctors, techs, and staff in my life. With all the knowledge they have of SOT, I always feel like I’m in safe hands. Now, as the SOT is starting to really take effect, I’m starting to rise from the pit I fought to get out of for so long and couldn’t. I feel better than I have in YEARS. I’m functioning again. And I owe it all to FLIMC!"
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-0')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up delay-1" id="testimonial-1">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/06/Lori-B.webp" alt="Lori B., Former Lyme Warrior" class="testimonial-avatar">
-                        <p class="testimonial-author">Lori B., Former Lyme Warrior</p>
-                    </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "My name is Lori and I was diagnosed with late-stage Lyme in April 2007. After the initial diagnosis, I was fortunate to receive two months of Doxycycline and went into remission until 2010. I then worked with a wonderful Lyme-literate doctor, taking numerous supplements and multiple antibiotics for 11 months. I went into remission off and on, spending over $20,000 on treatments.<br><br>In 2016, I had a lesion on my brain and had to go back on Doxycycline for over a year. I continued to relapse until 2019, always experiencing the same severe symptoms...<br><br>After my father passed in 2019, my symptoms returned with a vengeance. I started researching new treatments and came across SOT... I chose Florida Integrative Medical Center and Dr. Monhollon for this breakthrough therapy. I received my first SOT for Borrelia Burgdorferi in June 2020... Four months post-SOT, I tested negative for Borrelia and all my symptoms disappeared. I'm now powerwalking, going to the gym, enjoying the sun, sleeping well, and reconnecting with friends.<br><br>Thank you, FLIMC and Dr. Monhollon, for giving me my life back!"
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-1')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
+                <div class="prose prose-lg text-slate-700 max-w-none space-y-4">
+                    <p>Florida Integrative Medical Center gave me my life back. I’m not exaggerating. Before I came to FLIMC and got SOT, I was nearly bedridden. I couldn’t function and was suffering terribly from Lyme and co-infections. I was in denial that I was even sick because I’d tried treatment after treatment with no results. And then I met Anna at FLIMC and she really validated what I was going through when no other doctor or medical professional would.</p>
+                    <p>As I’ve come for treatments at FLIMC, I’ve come to find that everyone is just as hospitable. They not only listen to me but they really fight for me. I have never met finer doctors, techs, and staff in my life. With all the knowledge they have of SOT, I always feel like I’m in safe hands (which is more than I can say for most other doctors). Now, as the SOT is starting to really take effect, I’m starting to rise from the pit I fought to get out of for so long and couldn’t. I feel better than I have in YEARS. I’m functioning again. And I owe it all to FLIMC!</p>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up delay-2" id="testimonial-2">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/05/prince-340x340-1.png" alt="Prince Matharu" class="testimonial-avatar">
-                        <p class="testimonial-author">Prince Matharu</p>
+            </div>
+
+            <!-- Lori B. -->
+            <div id="lori" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+                    <img src="lori.jpg" alt="Lori B." class="w-32 h-32 rounded-full object-cover border-4 border-slate-100 shadow-lg">
+                    <div>
+                        <div class="flex text-apexteal-500 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-space-900 mb-1">Lori B.</h2>
+                        <p class="text-apexteal-600 font-semibold uppercase tracking-wider text-sm">Former Lyme Warrior</p>
                     </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "My name is Prince Matharu, and I had been dealing with Lyme, mold toxicity, severe immune dysregulation, and tissue degeneration. I went from specialist to specialist—from Western medicine to Chinese traditional medicine—without lasting relief.<br><br>I discovered FLIMC while researching SOT treatments for Lyme. The person who attended me was kind, patient, and spent over 20 minutes discussing my situation and explaining the therapy. Unlike other places that charged high fees just for a consultation, FLIMC made me feel supported from the start.<br><br>Eventually, I chose to do Ozone EBOO therapy along with exosomes. These cutting-edge treatments are offered at only a few clinics nationwide. Anna, who is extremely knowledgeable in exosome therapy, was also amazing.<br><br>Everyone at FLIMC is friendly, caring, and focused on safety. I’m still undergoing treatment, but I highly encourage anyone with complex chronic illnesses to reach out to Florida Integrative Medical Center."
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-2')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up delay-3" id="testimonial-3">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2026/04/Linda-Beggs.jpg" alt="Linda Beggs" class="testimonial-avatar">
-                        <p class="testimonial-author">Linda Beggs</p>
-                    </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "I just want to thank the expert team at Florida Integrative Medical Center for their great care. I am living life to the fullest again!<br><br>I had been sick for several years and my doctors back in Michigan didn’t know what it was... Dr. Monhollon was able to determine I had Lyme’s Disease as well as several infections and parasites... I immediately began infusions to strengthen me and blood was drawn for my first SOT. Since it takes a while for it to come back from Greece, they used this time for several EBOO treatments that made such a difference. That was my turning point.<br><br>I had a total of 3 SOT’s along with the EBOO’s. By April I was feeling really good. Now it is mid-November and I feel like a new person. I do many physical activities now on a regular basis and haven’t had a nap in months.<br><br>When I first arrived at Florida Integrative Medical Center I was hopeless. Now I have my life back! Thanks for all of the meticulous expert care I received. All the staff was so friendly and supportive."
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-3')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
+                <div class="prose prose-lg text-slate-700 max-w-none space-y-4">
+                    <p>My name is Lori and I was diagnosed with late-stage Lyme in April 2007. After the initial diagnosis, I was fortunate to receive two months of Doxycycline and went into remission until 2010. I then worked with a wonderful Lyme-literate doctor, taking numerous supplements and multiple antibiotics for 11 months. I went into remission off and on, spending over $20,000 on treatments.</p>
+                    <p>In 2016, I had a lesion on my brain and had to go back on Doxycycline for over a year. I continued to relapse until 2019, always experiencing the same severe symptoms.</p>
+                    <p>My primary symptoms included IBS, severe joint pain, brain fog, memory issues, itchy skin, eye floaters, light sensitivity, tinnitus, hair loss, insomnia, hot/cold flashes, anxiety, depression, and extreme fatigue.</p>
+                    <p>After my father passed in 2019, my symptoms returned with a vengeance. I started researching new treatments and came across SOT (Supportive Oligonucleotide Therapy) through a Lyme support group.</p>
+                    <p>I chose Florida Integrative Medical Center and Dr. Monhollon for this breakthrough therapy. I received my first SOT for Borrelia Burgdorferi in June 2020, and my second in March 2021.</p>
+                    <p>Four months post-SOT, I tested negative for Borrelia and all my symptoms disappeared. I'm now powerwalking, going to the gym, enjoying the sun, sleeping well, and reconnecting with friends. I also had floaters removed via vitreolysis, and my vision is now 20/20.</p>
+                    <p>Thank you, FLIMC and Dr. Monhollon, for giving me my life back!</p>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up" id="testimonial-4">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/04/cropped-flimc-logo-170x-e1746037843962.png" alt="Agnieszka Gruszecka" class="testimonial-avatar">
-                        <p class="testimonial-author">Agnieszka Gruszecka</p>
+            </div>
+
+            <!-- Prince Matharu -->
+            <div id="prince" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+                    <img src="prince.jpg" alt="Prince Matharu" class="w-32 h-32 rounded-full object-cover border-4 border-slate-100 shadow-lg">
+                    <div>
+                        <div class="flex text-apexteal-500 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-space-900">Prince Matharu</h2>
                     </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "My name is Agnieszka and I am a health care practitioner... I got results with 4 different infections with main Lyme disease, which by that time put my entire body 'on fire' with inflammation... I could barely function never mind working.<br><br>Then... MIRACLE treatment was offered to me: EBOO!<br><br>It is MY go-to treatment by itself but if combined with small amounts of Methylene blue IV... it is literally mind blowing. About 20 min into a treatment I start feeling extremely aware and crispy clean in my brain, like my brain cells are actually doing what they supposed to do... my vision improves at the spot right there and inflammation reduces drastically!!!!<br><br>There is a sense of good, clean High on feeling good. Please try it for yourself, it really works and you will feel better in your body and life."
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-4')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up delay-1" id="testimonial-5">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/05/Beverly.webp" alt="Beverly" class="testimonial-avatar">
-                        <p class="testimonial-author">Beverly</p>
-                    </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "I’ve had Lyme since 2009. For ten years, I visited many doctors and specialists. I had pain blocks, a muscle biopsy, and was diagnosed with fibromyalgia, carpal tunnel syndrome, depression, and more. Eventually, I received a Lyme diagnosis, but it wasn’t CDC approved.<br><br>I treated with antibiotics for 1.5 years and improved slightly. Later, I found out about SOT and tested CDC-positive for Lyme. I received my first SOT in December 2020 at FLIMC and felt better immediately. I used to be unable to walk around the block or hold a gallon of milk. Since my first SOT, I’ve gone snow skiing and spent four days walking around Disney World.<br><br>I had originally chosen a more expensive clinic in Georgia, but after disorganized Zoom appointments, I called FLIMC. I’m so glad I chose FLIMC—I feel cared for and am improving greatly."
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-5')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
+                <div class="prose prose-lg text-slate-700 max-w-none space-y-4">
+                    <p>My name is Prince Matharu, and I had been dealing with Lyme, mold toxicity, severe immune dysregulation, and tissue degeneration. I went from specialist to specialist—from Western medicine to Chinese traditional medicine—without lasting relief.</p>
+                    <p>I discovered FLIMC while researching SOT treatments for Lyme. The person who attended me was kind, patient, and spent over 20 minutes discussing my situation and explaining the therapy. Unlike other places that charged high fees just for a consultation, FLIMC made me feel supported from the start.</p>
+                    <p>Eventually, I chose to do Ozone EBO2 therapy along with exosomes. These cutting-edge treatments are offered at only a few clinics nationwide. Anna, who is extremely knowledgeable in exosome therapy, was also amazing.</p>
+                    <p>Everyone at FLIMC is friendly, caring, and focused on safety. I’m still undergoing treatment, but I highly encourage anyone with complex chronic illnesses to reach out to Florida Integrative Medical Center.</p>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up delay-2" id="testimonial-6">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/06/Jennifer-e1749749072652.webp" alt="Jennifer" class="testimonial-avatar">
-                        <p class="testimonial-author">Jennifer</p>
+            </div>
+
+            <!-- Linda Beggs -->
+            <div id="linda" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+                    <img src="linda.jpg" alt="Linda Beggs" class="w-32 h-32 rounded-full object-cover border-4 border-slate-100 shadow-lg">
+                    <div>
+                        <div class="flex text-apexteal-500 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-space-900">Linda Beggs</h2>
                     </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "In September 2020, I woke up completely bedridden, unable to walk. Every bone, joint, and muscle ached with level 10 pain... I didn’t know what was wrong, but I remembered that Dr. Monhollon had helped my mom fight cancer 20 years ago.<br><br>In just five minutes, he diagnosed me with Lyme disease and mercury poisoning. Bloodwork confirmed everything he had said... I received my SOT on January 29, 2021. On March 24—just 8.5 weeks later—I woke up feeling like myself again.<br><br>Today, I feel healed and fully able to do everything I could before I got sick. FLIMC and the staff are incredible. Dr. Monhollon saved my life, and you couldn’t be in better hands."
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-6')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up delay-3" id="testimonial-7">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2026/04/Barbara-Huntoon.jpg" alt="Barbara Huntoon" class="testimonial-avatar">
-                        <p class="testimonial-author">Barbara Huntoon</p>
-                    </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "My name is Barbara Huntoon and I have had the honor of knowing Dr. Monhollon’s work for close to 30 years... Fast forward 25 years, to 2017, I was exposed to a deadly fungus... I finally became a patient of Dr. Monhollon’s by receiving the UV/IV blood cleansing, which cleared my symptoms in 3 treatments. I had my life back again.<br><br>In 2023, I walked into a cloud of pesticide unknowingly, and I went down fast... I sought out Dr. M’s clinic for help and received more UV/IV which stabilized me quickly... In July 2024 I again encountered bug bites and had a severe reaction... I decided to try the EBOO treatments... I have completed my first EBOO and immediately observed increased energy, and rapid drying of the sores from the infection.<br><br>The Florida Integrative Medical Center provides 'Real Medicine' that blazes a trail for the future of true Healing arts and Science of Bio-regeneration of the human body, at Florida Integrative Medical Center, miracles are possible, God Bless them."
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-7')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
+                <div class="prose prose-lg text-slate-700 max-w-none space-y-4">
+                    <p>I just want to thank the expert team at Florida Integrative Medical Center for their great care. I am living life to the fullest again!</p>
+                    <p>I had been sick for several years and my doctors back in Michigan didn’t know what it was. Last year as we drove to Florida for the winter, I was making arrangements for dying. By the time we arrived at our Florida home all my funeral plans were made. That may seem morbid but I knew it would be happening soon. My husband, who just retired, cooked meals, cleaned and did all the shopping and I was so weak that I slept all the time. He spent his days trying to make me comfortable. After we arrived in Florida he found a doctor facility that he took me to about an hour away. They thought I had Lyme’s disease but they insisted I needed a treatment package that would cost $28,000 and it would be the first of many treatment packages. We knew we couldn’t afford it. So we prayed and he located Florida Integrative Medical Center.</p>
+                    <p>Dr. Monhollon was able to determine I had Lyme’s Disease as well as several infections and parasites. They drew my blood and sent it to Vibrant Labs. After a few weeks, the blood work returned describing the strains of Lymes and the co-infections that made me so sick. Dr Monhollon explained that they didn’t sell ‘packages’ and we were able to afford all the treatments he recommended. I immediately began infusions to strengthen me and blood was drawn for my first SOT. Since it takes a while for it to come back from Greece, they used this time for several EBO2 treatments that made such a difference. That was my turning point. I went pleasure shopping for the first time and had hope for the first time.</p>
+                    <p>I had a total of 3 SOT’s along with the EBO2’s. By April I was feeling really good.</p>
+                    <p>Now it is mid-November and I feel like a new person. I do many physical activities now on a regular basis and haven’t had a nap in months. My husband can’t keep up with me and he hasn’t had to cook, clean or grocery shop since last spring! We couldn’t be more happy !!!</p>
+                    <p>When I first arrived at Florida Integrative Medical Center I was hopeless. Now I have my life back!</p>
+                    <p>Thanks for all of the meticulous expert care I received. All the staff was so friendly and supportive. I just can’t thank them enough. You will always have a special place in my heart.</p>
+                    <p>Thank you again for everything!</p>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up" id="testimonial-8">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo-170x-e1746037843962.png" alt="Zuzana Shaw Novakova" class="testimonial-avatar">
-                        <p class="testimonial-author">Zuzana Shaw Novakova</p>
+            </div>
+
+            <!-- Agnieszka Gruszecka -->
+            <div id="agnieszka" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+                    <img src="agnieszka.jpg" alt="Agnieszka Gruszecka" class="w-32 h-32 rounded-full object-cover border-4 border-slate-100 shadow-lg">
+                    <div>
+                        <div class="flex text-apexteal-500 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-space-900">Agnieszka Gruszecka</h2>
                     </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "In a world where rushed visits and symptom-masking treatments have become the norm, discovering Dr. John Monhollon is like finding a hidden treasure in the field of medicine. Dr. Monhollon is not just a doctor—he is a true healer, a compassionate soul, and a visionary in integrative and holistic care.<br><br>What sets him apart is his unwavering commitment to treating the root cause of illness, rather than just surface symptoms. His approach embraces the whole person—body, mind, and spirit. He listens deeply and offers guidance that is both medically sound and soulfully supportive.<br><br>At his clinic, you don’t feel like a number—you feel seen, heard, and respected. Dr. Monhollon takes the time to explain, educate, and walk with you through your journey to wellness... I wholeheartedly recommend Dr. John Monhollon to anyone seeking not just treatment, but transformation."
-                        </blockquote>
-                    </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-8')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
                 </div>
-                <div class="glass-card testimonial-card scroll-fade-up delay-1" id="testimonial-9">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo-170x-e1746037843962.png" alt="Elizabeth Howard" class="testimonial-avatar">
-                        <p class="testimonial-author">Elizabeth Howard</p>
+                <div class="prose prose-lg text-slate-700 max-w-none space-y-4">
+                    <p>My name is Agnieszka and I am a health care practitioner, to be exact a CranioSacral therapist. I’ve been in this profession for over 20 years and working with a variety of people, different ages and conditions as well….</p>
+                    <p>I’ve been usually on the other side of equation in healing journey, helping people to achieve their health goal….</p>
+                    <p>I’ve been also referring my patients to FLIMC and Dr.Monholland for years till finally I’ve connected all my dots of discomfort in my body while listening to my patients discomfort symptoms….</p>
+                    <p>Long story short, to my “surprise “ I’ve shared lots of their symptoms and decided to get tested for Lyme. I got results with 4 different infections with main Lyme disease, which by that time put my entire body “on fire” with inflammation. I was born in Poland, where Lyme is quite “famous “ and thriving, making people so sick that they can’t even dream of perfect health.</p>
+                    <p>I could barely function never mind working. Spent hours with different IV drips, foot detox, daily sauna and 4 SOT treatments.</p>
+                    <p>Then…..MIRACLE treatment was offered to me: EBO2!</p>
+                    <p>I’m not going to go into details what EBO2 treatment is but what it and did for me.</p>
+                    <p>It is MY go-to treatment by itself but if combined with small amounts of Methylene blue IV….it is literally mind blowing.</p>
+                    <p>The treatment lasts about 1,5h all together but I have to say each time I’ve received the combination of the two: about 20 min into a treatment I start feeling extremely aware and crispy clean in my brain, like my brain cells are actually doing what they supposed to do, connecting and communicating vs being just a static noise there, my vision improves at the spot right there and inflammation reduces drastically!!!!</p>
+                    <p>There is a sense of good, clean High on feeling good.</p>
+                    <p>It didn’t happen after the first treatment but around the fifth that my joint inflammation is so much less than before. I can actually take longer walks without my big toes feeling like they break each time I make the next step.</p>
+                    <p>Please try it for yourself, it really works and you will feel better in your body and life. What’s better than that?</p>
+                </div>
+            </div>
+
+            <!-- Beverly -->
+            <div id="beverly" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+                    <img src="beverly.jpg" alt="Beverly" class="w-32 h-32 rounded-full object-cover border-4 border-slate-100 shadow-lg">
+                    <div>
+                        <div class="flex text-apexteal-500 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-space-900">Beverly</h2>
                     </div>
-                    <div class="testimonial-content-wrapper ">
-                        <blockquote class="testimonial-text">
-                            "Dr. John Monhollon and his staff provide the most professional care of any facility I have ever been to—and I have been to many.<br><br>If you’re looking for personalized care that targets your specific needs in today’s fast-paced world, I highly recommend them."
-                        </blockquote>
+                </div>
+                <div class="prose prose-lg text-slate-700 max-w-none space-y-4">
+                    <p>I’ve had Lyme since 2009. For ten years, I visited many doctors and specialists. I had pain blocks, a muscle biopsy, and was diagnosed with fibromyalgia, carpal tunnel syndrome, depression, and more. Eventually, I received a Lyme diagnosis, but it wasn’t CDC approved.</p>
+                    <p>I treated with antibiotics for 1.5 years and improved slightly. Later, I found out about SOT and tested CDC-positive for Lyme. I received my first SOT in December 2020 at FLIMC and felt better immediately. I used to be unable to walk around the block or hold a gallon of milk. Since my first SOT, I’ve gone snow skiing and spent four days walking around Disney World. I’m about 80% better now and getting my second SOT.</p>
+                    <p>I had originally chosen a more expensive clinic in Georgia, but after disorganized Zoom appointments, I called FLIMC. I’m so glad I chose FLIMC—I feel cared for and am improving greatly.</p>
+                </div>
+            </div>
+
+            <!-- Jennifer -->
+            <div id="jennifer" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+                    <img src="jennifer.jpg" alt="Jennifer" class="w-32 h-32 rounded-full object-cover border-4 border-slate-100 shadow-lg">
+                    <div>
+                        <div class="flex text-apexteal-500 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-space-900">Jennifer</h2>
+                    </div>
+                </div>
+                <div class="prose prose-lg text-slate-700 max-w-none space-y-4">
+                    <p>In September 2020, I woke up completely bedridden, unable to walk. Every bone, joint, and muscle ached with level 10 pain. I was convinced I had bone cancer. I endured two exhausting months of misdiagnoses—including Lupus, Polymyositis, and Sjögren’s syndrome—along with a negative Western Blot test and prescriptions for narcotics, muscle relaxers, and Prednisone.</p>
+                    <p>I refused all medications except Prednisone. At 60mg, I could walk by late morning. I didn’t know what was wrong, but I remembered that Dr. Monhollon had helped my mom fight cancer 20 years ago.</p>
+                    <p>In just five minutes, he diagnosed me with Lyme disease and mercury poisoning. Bloodwork confirmed everything he had said. I also saw a biological dentist who confirmed leaky fillings, which I had removed.</p>
+                    <p>Dr. Monhollon told me about SOT, and after receiving bloodwork showing Borrelia Mayonii, I ordered it immediately. I received my SOT on January 29, 2021. On March 24—just 8.5 weeks later—I woke up feeling like myself again.</p>
+                    <p>Today, I feel healed and fully able to do everything I could before I got sick. I also continued antibiotics, herbal supplements, parasite cleanses, and intensive detox protocols (daily sauna, Epsom salt baths, EVOX, coffee enemas, etc.).</p>
+                    <p>FLIMC and the staff are incredible. Dr. Monhollon saved my life, and you couldn’t be in better hands.</p>
+                </div>
+            </div>
+
+            <!-- Barbara Huntoon -->
+            <div id="barbara" class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+                    <img src="barbara.jpg" alt="Barbara Huntoon" class="w-32 h-32 rounded-full object-cover border-4 border-slate-100 shadow-lg">
+                    <div>
+                        <div class="flex text-apexteal-500 mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-space-900">Barbara Huntoon</h2>
+                    </div>
+                </div>
+                <div class="prose prose-lg text-slate-700 max-w-none space-y-4">
+                    <p>My name is Barbara Huntoon and I have had the honor of knowing Dr. Monhollon’s work for close to 30 years. From 1995-1998 I was the owner of “The Herb Garden”, a small natural health and herbal apothecary store in New Port Richey, Florida.</p>
+                    <p>My health challenges began with a bad reaction to the polio vaccine when I was 7. I remember my mother refusing to let me go to the hospital, and she cared for my pneumonia at home. I was very ill, particularly with respiratory infections, severe migraines, and a damaged lymph system. I also became chemically sensitive, and would react to chemical smells and substances on my skin.</p>
+                    <p>This led me on a journey in my early adult life to study herbal medicine. After years of success in improving my health, I opened my won herbal store to help others.</p>
+                    <p>The holistic health community was a very tight knit group around our area and the one Doctor’s name that we heard great things from was DR. Monhollan, who was in St. Pete at the time. We actively referred our clients to him and witnessed many testimonies about his work in the 90’s.</p>
+                    <p>I moved to Sarasota in 1998 and began working at Full Spectrum Health, a holistic nutritional clinic owned by (the late) Eve Prang Plews.</p>
+                    <p>My apprenticeship there was extraordinary, because the practitioners skills in diagnostics, herbology, homeopath, and biochemistry was her gift and I witnessed many people come back to life through intregrative medical protocols as Dr. Monhollan’s clinic provides. From 1999 to 2005 I worked with Eve and ran her store front, providing support for patient programs. We had a great team of holistic doctors and practitioners in Sarasota at this time, and then Dr. Monhollon moved to Sarasota.</p>
+                    <p>Fast forward 25 years, to 2017, I was exposed to a deadly fungus through a cut in my ankle called crypto mycosis. I could not get out of bed for months, and had severe skin rashes rotating, with lung and sinus infections. I finally became a patient of Dr. Monhollon’s by receiving the UV/IV blood cleansing, which cleared my symptoms in 3 treatments. I had my life back again. In 2023, I walked into a cloud of pesticide unknowingly, and I went down fast. My spleen swelled and I became very ill. I sought out Dr. M’s clinic for help and received more UV/IV which stabilized me quickly. Again that year, as I was out hiking, and was exposed to chiggers, which caused another severe skin reaction. The bites turned to abscesses quickly, and I was fighting sepsis. Again, I went to Dr. Monhollon’s clinic and his wonderful staff guided me through another series of UV/IV treatments and I recovered fully.</p>
+                    <p>In July 2024 I again encountered bug bites and had a severe reaction. This time, it was sand fleas which transmitted a protozoa parasite into my skin causing severe infection and rapid spreading on my face, hand, chest and side, once again I was in danger of sepsis. The damage to my skin was frightening and as a vocalist and musical performer, the possibility of severe scarring on my face is very real with this aggressive infection.</p>
+                    <p>I decided to try the EBO2 treatments. Realizing this is the new cutting-edge technology for blood purification and Lyme disease and is far more powerful than any other blood detox technique, it is worth the investment. I believe it will clean out the other mold, fungus and toxins that have been in my system for years.</p>
+                    <p>I have completed my first EBO2 and immediately observed increased energy, and rapid drying of the sores from the infection. The follow up Myers/glutathione accelerated my healing process and at this point, 3 days after my first treatment, everything is dry, tightening and healing. I look forward to the next two treatments, as I am now finally one of Dr. Monhollon’s miracle cases.</p>
+                    <p>I believed in him long ago because of all the testimonies I witnessed. Today, I am deeply grateful for his team of kind, brilliant, caring health care members who saved my life…again.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <!-- Main Contact Bar (#5ac6d6) -->
+        <div class="bg-apexteal-400 pt-16 pb-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center">
+                    <!-- Logo -->
+                    <div class="mb-6 flex justify-center">
+                        <img src="logo.png" alt="Florida Integrative Medical Center" class="h-32 w-auto object-contain drop-shadow-md">
                     </div>
                     
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
-                </div>
-                <div class="glass-card testimonial-card scroll-fade-up delay-2" id="testimonial-10">
-                    <div class="testimonial-header">
-                        <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo-170x-e1746037843962.png" alt="Renee Hanania" class="testimonial-avatar">
-                        <p class="testimonial-author">Renee Hanania</p>
+                    <!-- Social Media -->
+                    <div class="flex space-x-4 mb-8">
+                        <a href="https://www.facebook.com/FLIMC/" target="_blank" class="w-10 h-10 rounded-full bg-space-900 flex items-center justify-center text-white hover:bg-white hover:text-apexteal-500 transition-all shadow-md">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/flimcsarasota" target="_blank" class="w-10 h-10 rounded-full bg-space-900 flex items-center justify-center text-white hover:bg-white hover:text-apexteal-500 transition-all shadow-md">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
                     </div>
-                    <div class="testimonial-content-wrapper is-long">
-                        <blockquote class="testimonial-text">
-                            "I love everyone at Florida Integrative Medical Center. It truly is my home away from home—from my BFF Traci to Dasha, and most of all, Dr. M. They were able to fit me in yesterday for a Vitamin C infusion, and Traci always finds a vein (lol)! MBC might take away some of my abilities, but I know the care I am receiving at Florida Integrative is top-notch, and the level of compassion is above and beyond.<br><br>THANK YOU! 🙏🏻"
-                        </blockquote>
+
+                    <!-- Mission Statement -->
+                    <div class="max-w-3xl text-center mb-10">
+                        <p class="text-space-900 font-medium text-lg leading-relaxed italic">
+                            Florida Integrative Medical Center provides natural supplements and holistic health solutions, supporting your wellness journey with science-backed care and integrative therapies.
+                        </p>
                     </div>
-                    <button class="read-more-btn" onclick="toggleExpand('testimonial-10')">Read More</button>
-                    <button class="close-btn" onclick="closeExpanded()">✖</button>
-                </div></div></div></section>
 
-    
-
-    
-
-
-<footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo-170x-e1746037843962.png" alt="FLIMC Logo">
-                    </div>
-                    <p>Florida Integrative Medical Center provides natural supplements and holistic health solutions, supporting your wellness journey with science-backed care and integrative therapies.</p>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>Have a question? Reach out to our team for an answer!</p>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" ><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-                        <div>
-                            <p>2415 University Parkway, Suite 218, Sarasota, Florida 34243, United States</p>
-                            <a href="https://g.co/kgs/5BnAE13" target="_blank">Directions</a>
+                    <!-- Contact Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mt-4 border-t border-space-900/10 pt-10">
+                        <div class="text-center">
+                            <i class="fa-solid fa-phone text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Phone Number</h4>
+                            <p class="text-space-900 text-xl font-bold">(941) 955-6220</p>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                        <a href="tel:9419556220">(941) 955-6220</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                        <a href="mailto:Info@flimc.com">Info@flimc.com</a>
+                        <div class="text-center">
+                            <i class="fa-solid fa-envelope text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Email Address</h4>
+                            <p class="text-space-900 font-bold text-lg cursor-pointer hover:text-white transition-colors">Info@flimc.com</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-location-dot text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Office Location</h4>
+                            <p class="text-space-900 font-medium leading-relaxed">2415 University Parkway, Suite 218,<br>Sarasota, Florida 34243, United States</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Florida Integrative Medical Center. All rights reserved.</p>
+        </div>
+
+        <!-- Copyright Footer (#047b8e) -->
+        <div class="bg-apexteal-500 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center text-sm text-white flex flex-col md:flex-row gap-3 items-center justify-center font-medium">
+                    <p>Copyright &copy; Flimc 2026. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- Custom JS -->
-    <script src="script.js"></script>
-
-
 
 </body>
 </html>

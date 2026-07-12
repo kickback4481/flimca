@@ -1,528 +1,941 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florida Integrative Medical Center — Sarasota's Premier Integrative & Functional Medicine</title>
-    <meta name="description" content="FLIMC delivers over 25 years of excellence in integrative & functional medicine for complex chronic health concerns in Sarasota, Florida.">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Florida Integrative Medical Center | Integrative & Functional Medicine</title>
+    <meta name="description" content="Integrative & Functional Medicine in Sarasota for Complex and Chronic Conditions with Dr. John Monhollon, MD. Trust our 25+ years of experience.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        space: {
+                            900: '#0B1120',
+                            800: '#111827',
+                            700: '#1F2937',
+                        },
+                        apexteal: {
+                            300: '#a8c8dc',
+                            400: '#5ac6d6',
+                            500: '#047b8e',
+                            600: '#036170',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(90, 198, 214, 0.2);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .hero-bg {
+            background-color: #0B1120;
+            background-image: linear-gradient(to bottom, rgba(11, 17, 32, 0.4), rgba(11, 17, 32, 0.9)), url('hero_medical_banner.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary i {
+            transform: rotate(180deg);
+        }
+        .icon-ring {
+            background: #047b8e;
+            box-shadow: 0 0 0 0 rgba(4, 123, 142, 0.5);
+            animation: pulse-ring 2s infinite;
+        }
+        
+        @keyframes platinum-spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        .platinum-stroke-overlay {
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+            padding: 3px;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: 20;
+            overflow: hidden;
+        }
+        .platinum-stroke-overlay::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 250%;
+            height: 250%;
+            background: conic-gradient(
+                from 0deg at 50% 50%,
+                #e5e4e2 0%,
+                #ffffff 20%,
+                #a8c8dc 50%,
+                #ffffff 80%,
+                #e5e4e2 100%
+            );
+            animation: platinum-spin 5s linear infinite;
+        }
+        .icon-ring:hover {
+            box-shadow: 0 0 15px rgba(90, 198, 214, 0.5);
+            transform: translateY(-5px);
+        }
+        .floating-badge {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo.png" alt="FLIMC Logo">
-            </a>
-            <div class="nav-links">
-                <a href="about.html">About</a>
-                <a href="#services">Services</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="https://flimc.myshopify.com/" target="_blank">Supplements</a>
-                <div class="dropdown" tabindex="0" onclick="this.classList.toggle('active')" onkeypress="if(event.key==='Enter') this.classList.toggle('active')">
-                    <a href="index.html#therapies" style="cursor: pointer;">Therapies</a>
-                    <div class="dropdown-menu">
-                        <a href="iv-therapies.html">IV & Infusion Therapies</a>
-                        <a href="ozone-therapy.html">Ozone Therapy</a>
-                        <a href="ubi-therapy.html">UBI Therapy</a>
-                        <a href="eboo-therapy.html">EBOO Therapy</a>
-                        <a href="ebo2-therapy.html">EBO₂ Therapy</a>
-                        <a href="eboo-vs-ebo2.html">EBOO vs EBO₂</a>
+    <!-- 1. Header & Navigation -->
+    <header class="fixed w-full top-0 z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                    <img src="logo.png" alt="Florida Integrative Medical Center" class="h-20 w-auto object-contain">
+                </a>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Home</a>
+                    <a href="#services" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Services</a>
+                    <a href="about.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">About</a>
+                    <a href="testimonials.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Testimonials</a>
+                    <div class="relative group">
+                        <a href="index.html#therapies" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide flex items-center gap-1">Therapies <i class="fa-solid fa-chevron-down text-xs"></i></a>
+                        <div class="absolute left-0 mt-4 w-48 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                        <a href="eboo.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBOO</a>
+                        <a href="ebo2.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBO2</a>
+                        <a href="eboo-vs-ebo2.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBOO vs EBO2</a>
                     </div>
-                </div>
-                <a href="#process">How it Works</a>
-                <a href="#faq">FAQ</a>
-            </div>
-            <div class="nav-actions">
-                <a href="mailto:Info@flimc.com" class="btn btn-primary">Book Appointment</a>
-            </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-                        </nav>
-    <!-- Mobile Nav Overlay -->
-        <div class="mobile-nav">
-            <div class="mobile-nav-inner">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="index.html#services">Services</a>
-                <div class="dropdown" tabindex="0" onclick="this.classList.toggle('active')" onkeypress="if(event.key==='Enter') this.classList.toggle('active')">
-                    <a style="cursor: pointer;">Therapies</a>
-                    <div class="dropdown-menu">
-                        <a href="iv-therapies.html">IV & Infusion Therapies</a>
-                        <a href="ozone-therapy.html">Ozone Therapy</a>
-                        <a href="ubi-therapy.html">UBI Therapy</a>
-                        <a href="eboo-therapy.html">EBOO</a>
-                        <a href="ebo2-therapy.html">EBO&#8322;</a>
-                        <a href="eboo-vs-ebo2.html">EBOO vs EBO&#8322;</a>
                     </div>
-                </div>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="index.html#process">How it Works</a>
-                <a href="index.html#faq">FAQ</a>
-                <a href="https://flimc.myshopify.com/" target="_blank">Supplements</a>
-                <a href="mailto:Info@flimc.com" class="btn btn-primary">Book Appointment</a>
-            </div>
-        </div>
+                    <a href="https://flimc.myshopify.com/" target="_blank" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Supplements</a>
+                    <a href="#contact" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Contact</a>
+                </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content scroll-fade-up">
-            <h1 class="hero-title">
-                Sarasota's #1 Choice for Integrative <br>
-                <span class="teal-accent">& Functional Medicine</span>
-            </h1>
-            <p class="hero-subtitle">Delivering Over 25 Years of Excellence in Complex and Chronic Care</p>
+                <!-- Call to Action -->
+                <div class="hidden lg:flex items-center">
+                    <span class="text-white font-bold text-lg bg-apexteal-500 px-6 py-3 rounded-full shadow-md shadow-apexteal-500/20 hover:bg-apexteal-400 transition-colors cursor-pointer">
+                        <i class="fa-solid fa-phone mr-2"></i> (941) 955-6220
+                    </span>
+                </div>
+                
+                                                                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.remove('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.add('overflow-hidden');" class="text-space-900 hover:text-apexteal-500 focus:outline-none transition-all">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
+        
+    <!-- 10x Better Mobile Menu (Centered Modal) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none scale-95 transition-all duration-300 md:hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-space-900/80 backdrop-blur-md" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');"></div>
+        
+        <!-- Menu Card -->
+        <div class="relative w-full max-w-sm bg-white rounded-[2rem] shadow-2xl p-6 md:p-8 overflow-hidden">
+            <!-- Decorative Shapes in Background -->
+            <div class="absolute -top-16 -right-16 w-48 h-48 bg-apexteal-300/30 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-16 -left-16 w-48 h-48 bg-apexteal-500/20 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <!-- Close Button -->
+            <button onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-apexteal-50 hover:text-apexteal-500 transition-colors z-10 border border-slate-100 shadow-sm">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            
+            <!-- Links -->
+            <div class="flex flex-col items-center gap-4 md:gap-5 relative z-10 mt-2">
+                <a href="index.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Home</a>
+                <a href="index.html#services" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Services</a>
+                <a href="about.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">About</a>
+                
+                <!-- Therapies Accordion/Group (Compact) -->
+                <div class="flex flex-col items-center gap-2 md:gap-3 bg-slate-50/80 backdrop-blur-sm w-full py-3 rounded-2xl border border-slate-100/50 shadow-inner">
+                    <span class="text-xs font-bold text-apexteal-500 uppercase tracking-widest">Therapies</span>
+                    <a href="eboo.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO</a>
+                    <a href="ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBO2</a>
+                    <a href="eboo-vs-ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO vs EBO2</a>
+                </div>
+                
+                <a href="testimonials.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Testimonials</a>
+                <a href="https://flimc.myshopify.com/" target="_blank" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Shop</a>
+                <a href="index.html#contact" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Contact</a>
+                
+                <!-- CTA -->
+                <a href="tel:9419556220" class="mt-1 w-full flex items-center justify-center gap-2 bg-apexteal-500 text-white font-bold py-3 md:py-4 rounded-xl shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-600 transition-all">
+                    <i class="fa-solid fa-phone"></i> (941) 955-6220
+                </a>
+            </div>
+        </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section" style="position: relative; overflow: hidden; background-color: #ffffff;">
-        <video id="water-bg-video" autoplay muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.35; transition: opacity 1.5s ease-in-out;">
+    <!-- 2. Hero Section (Concept) -->
+    <section class="relative mt-24 pt-20 pb-40 bg-space-900 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('hero_medical_banner.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-space-900 via-space-900/90 to-apexteal-900/60"></div>
+        
+        <!-- Decorative Roots SVG -->
+        <svg class="absolute right-[-40px] top-[10px] w-64 h-96 opacity-40 pointer-events-none" viewBox="0 0 220 340" fill="none">
+            <path d="M180 0 C170 40 190 70 160 100 C130 130 150 160 120 190 C90 220 110 250 80 280 C60 300 65 320 50 340" stroke="#047b8e" stroke-width="1.6" opacity="0.55"/>
+            <path d="M160 100 C140 105 125 95 110 115" stroke="#047b8e" stroke-width="1.2" opacity="0.4"/>
+            <path d="M120 190 C100 195 90 185 75 200" stroke="#047b8e" stroke-width="1.2" opacity="0.4"/>
+            <path d="M80 280 C65 282 58 275 45 285" stroke="#047b8e" stroke-width="1.2" opacity="0.4"/>
+            <circle cx="180" cy="0" r="3" fill="#047b8e"/>
+            <circle cx="120" cy="190" r="3" fill="#047b8e"/>
+            <circle cx="50" cy="340" r="3" fill="#047b8e"/>
+        </svg>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl">
+                <div class="text-apexteal-400 font-bold uppercase tracking-widest text-sm mb-4">25+ Years · Sarasota, FL</div>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                    Where healthcare<br>meets <em class="text-apexteal-400 font-serif italic font-normal">hope.</em>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-10 max-w-xl">
+                    Integrative &amp; functional medicine for complex chronic health concerns — guided by experience, compassion, and a legacy of trusted care.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="bg-apexteal-500 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-400 transition-all">Request an Appointment</a>
+                    <a href="tel:9419556220" class="border-2 border-slate-500/50 text-white font-bold py-4 px-8 rounded-full hover:border-white transition-all backdrop-blur-sm">Call the Office</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip (Overlapping) -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 -mt-20 mb-16">
+        <div class="bg-white rounded-[2rem] shadow-2xl p-6 md:p-8 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-100 border border-slate-100">
+            <div class="flex-1 text-center p-4">
+                <div class="text-4xl font-serif text-space-900 font-bold mb-2">25+</div>
+                <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Years in Functional Medicine</div>
+            </div>
+            <div class="flex-1 text-center p-4">
+                <div class="text-4xl font-serif text-space-900 font-bold mb-2">ILADS</div>
+                <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Trained Lyme Physician</div>
+            </div>
+            <div class="flex-1 text-center p-4">
+                <div class="text-4xl font-serif text-space-900 font-bold mb-2">1:1</div>
+                <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Personalized Care Plans</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. About the Specialist (Split Layout) -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Left: Photo -->
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-apexteal-500/20 rounded-3xl transform rotate-3 scale-105"></div>
+                    <img src="doctor-photo.jpg" alt="Lead Specialist" class="relative rounded-3xl shadow-2xl object-cover w-full aspect-[4/5] z-10 border border-slate-100">
+                </div>
+                
+                <!-- Right: Content -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-bold text-space-900 mb-4 leading-tight">
+                        A Leader in Integrative Wellness for Over <span class="text-apexteal-500">25 Years</span>
+                    </h2>
+                    <h3 class="text-2xl text-slate-500 font-medium mb-8">Dr. John Monhollon, MD — "Dr. M"</h3>
+                    
+                    <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <p>
+                            Dr. John Monhollon, MD — widely known as “Dr. M” — brings more than two decades of experience in functional and integrative medicine. His approach focuses on uncovering the underlying causes of health conditions and empowering patients to take an active role in their care.
+                        </p>
+                        <p>
+                            At FLIMC, patients are welcomed with trusted experience, heartfelt compassion, and the highest quality of care.
+                        </p>
+                        <p>
+                            Over the years, Dr. M has built a team of dedicated professionals who share his commitment to discovering the root cause of health concerns and creating personalized care plans. Together, they have created a center where clinical expertise, compassion, and hope come together to help patients improve their health, restore vitality, and enhance quality of life.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <a href="about.html" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-space-900 border border-transparent rounded-full hover:bg-space-800 hover:shadow-lg hover:shadow-apexteal-500/30">
+                            Learn More About Our Team <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Quick Service Icons -->
+    <section class="py-12 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center items-start gap-12 md:gap-16 lg:gap-24 text-center">
+                
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-20 h-20 rounded-full icon-ring flex items-center justify-center mb-4 transition-all duration-300">
+                        <i class="fa-solid fa-star text-2xl text-white"></i>
+                    </div>
+                    <span class="font-semibold text-space-900 text-sm uppercase tracking-wider">Testimonials</span>
+                </div>
+
+                <a href="conditions.html" class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-20 h-20 rounded-full icon-ring flex items-center justify-center mb-4 transition-all duration-300">
+                        <i class="fa-solid fa-clipboard-list text-2xl text-white"></i>
+                    </div>
+                    <span class="font-semibold text-space-900 text-sm uppercase tracking-wider">Conditions</span>
+                </a>
+
+                <a href="https://flimc.myshopify.com/" target="_blank" class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-20 h-20 rounded-full icon-ring flex items-center justify-center mb-4 transition-all duration-300">
+                        <i class="fa-solid fa-pills text-2xl text-white"></i>
+                    </div>
+                    <span class="font-semibold text-space-900 text-sm uppercase tracking-wider">Supplements</span>
+                </a>
+
+                <a href="eboo.html" class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-20 h-20 rounded-full icon-ring flex items-center justify-center mb-4 transition-all duration-300">
+                        <i class="fa-solid fa-filter text-2xl text-white"></i>
+                    </div>
+                    <span class="font-semibold text-space-900 text-sm uppercase tracking-wider">EBOO</span>
+                </a>
+
+                <a href="ebo2.html" class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-20 h-20 rounded-full icon-ring flex items-center justify-center mb-4 transition-all duration-300">
+                        <i class="fa-solid fa-shield-virus text-2xl text-white"></i>
+                    </div>
+                    <span class="font-semibold text-space-900 text-sm uppercase tracking-wider">EBO2</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Therapies -->
+    <section id="therapies" class="relative py-24 border-y border-slate-200 overflow-hidden bg-slate-50">
+        <!-- Background Video with Loop Fade -->
+        <video id="water-bg" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-1000 opacity-0">
             <source src="Water.mp4" type="video/mp4">
         </video>
-        <div class="container scroll-fade-up" style="position: relative; z-index: 1;">
-            <div class="section-header">
-                <span class="badge">About Us</span>
-                <h2>A Trusted Leader in Integrative Medicine & Complex Chronic Illness Care</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text glass-card">
-                    <p style="font-size: 1.5rem; font-weight: 800; color: var(--brand-dark); line-height: 1.4;">Dr. John Monhollon, MD, has spent more than 25 years helping patients navigate complex health challenges through a personalized, patient-centered approach to care.</p>
-                    <p>A board-certified family medicine physician, Dr. Monhollon combines traditional medical training with integrative and functional medicine principles to help patients better understand the factors influencing their health and wellness.</p>
-                    <p>In addition to his extensive clinical experience, Dr. Monhollon completed advanced physician training through the International Lyme and Associated Diseases Society (ILADS) and has served as a physician mentor for other healthcare providers pursuing advanced education in Lyme disease and tick-borne illness management.</p>
-                    <p>Patients from Sarasota and throughout Florida seek care at FLIMC for chronic health concerns, Lyme disease, immune system challenges, preventive wellness, and comprehensive health optimization.</p>
+        
+        <!-- Overlay and Section Edge Masks -->
+        <div class="absolute inset-0 bg-white/50 z-0 pointer-events-none mix-blend-overlay"></div>
+        <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-slate-100 to-transparent z-0 pointer-events-none"></div>
+        <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-0 pointer-events-none"></div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const vid = document.getElementById('water-bg');
+                if (vid) {
+                    // Initial fade in when video is ready to play
+                    vid.oncanplay = () => vid.classList.replace('opacity-0', 'opacity-50');
+                    
+                    vid.addEventListener('timeupdate', () => {
+                        if (vid.duration) {
+                            const remaining = vid.duration - vid.currentTime;
+                            // Fade out in the last 1 second to hide the jump cut
+                            if (remaining < 1 && vid.classList.contains('opacity-50')) {
+                                vid.classList.replace('opacity-50', 'opacity-0');
+                            } 
+                            // Fade back in after looping
+                            else if (vid.currentTime > 0.5 && remaining > 1 && vid.classList.contains('opacity-0')) {
+                                vid.classList.replace('opacity-0', 'opacity-50');
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-space-900 mb-6">Therapies</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 text-sm text-slate-600 text-left md:text-center leading-relaxed shadow-sm">
+                        <span class="font-bold text-space-900">Note:</span> The therapies mentioned are not FDA-approved and are considered investigational. They are not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. Consult with Dr. Monhollon or another qualified healthcare provider to determine the appropriateness of these therapies for your specific health concerns.
+                    </div>
                 </div>
-                <div class="about-image glass-card">
-                    <img src="doctor-photo.jpg" alt="Doctor Photo" class="doctor-image">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 text-center">
+                <!-- IV and Infusion -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col text-left relative">
+                    <div class="platinum-stroke-overlay"></div>
+                    <div class="w-full h-64 overflow-hidden relative bg-slate-50">
+                        <img src="iv.png" alt="IV and Infusion Therapies" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-space-900 mb-4 group-hover:text-apexteal-500 transition-colors">IV & Infusion Therapies</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm line-clamp-3 transition-all">
+                            IV and injectable therapies deliver nutrients directly into your bloodstream for efficient absorption. They are designed to support your body's natural functions. Individual results may vary.
+                        </p>
+                        <button onclick="this.previousElementSibling.classList.toggle('line-clamp-3'); this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';" class="text-apexteal-500 font-bold text-sm mt-3 hover:text-apexteal-600 transition-colors uppercase tracking-wider text-left w-fit">Read more</button>
+                    </div>
+                </div>
+
+                <!-- EBOO -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col text-left relative">
+                    <div class="platinum-stroke-overlay"></div>
+                    <div class="w-full h-64 overflow-hidden relative bg-slate-50">
+                        <img src="eboo.png" alt="EBOO Therapy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-space-900 mb-4 group-hover:text-apexteal-500 transition-colors">EBOO</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm line-clamp-3 transition-all">
+                            EBOO (Extracorporeal Blood Oxygenation and Ozonation) is one of the most advanced forms of ozone-based blood filtration and oxygenation available in integrative medicine.
+                        </p>
+                        <a href="eboo.html" class="text-apexteal-500 font-bold text-sm mt-3 hover:text-apexteal-600 transition-colors uppercase tracking-wider text-left w-fit block">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Ozone Therapy -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col text-left relative">
+                    <div class="platinum-stroke-overlay"></div>
+                    <div class="w-full h-64 overflow-hidden relative bg-slate-50">
+                        <img src="Ebo2.png" alt="EBO2 Therapy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-space-900 mb-4 group-hover:text-apexteal-500 transition-colors">EBO2 Therapy</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm line-clamp-3 transition-all">
+                            EBO₂ builds upon these same core principles while incorporating an advanced high-performance blood filtration system. As blood continuously circulates through the extracorporeal circuit, it is filtered, oxygenated, and precisely exposed to medical-grade ozone before being returned to the body. This additional filtration component is designed to help reduce the burden of unwanted particles that may accumulate in the bloodstream while supporting healthy circulation, oxygen delivery, and overall physiological balance.
+                        </p>
+                        <button onclick="this.previousElementSibling.classList.toggle('line-clamp-3'); this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';" class="text-apexteal-500 font-bold text-sm mt-3 hover:text-apexteal-600 transition-colors uppercase tracking-wider text-left w-fit">Read more</button>
+                    </div>
+                </div>
+
+                <!-- UBI Therapy -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden group cursor-pointer hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col text-left relative">
+                    <div class="platinum-stroke-overlay"></div>
+                    <div class="w-full h-64 overflow-hidden relative bg-slate-50">
+                        <img src="ubi.png" alt="UBI Therapy" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold text-space-900 mb-4 group-hover:text-apexteal-500 transition-colors">UBI Therapy</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm line-clamp-3 transition-all">
+                            Ultraviolet Blood Irradiation (UBI) is a gentle, non-pharmaceutical therapy that exposes a small amount of your blood to ultraviolet light before reintroducing it into the body. This process is believed to help support immune function, enhance circulation, and promote detoxification as part of a comprehensive wellness approach.
+                        </p>
+                        <button onclick="this.previousElementSibling.classList.toggle('line-clamp-3'); this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';" class="text-apexteal-500 font-bold text-sm mt-3 hover:text-apexteal-600 transition-colors uppercase tracking-wider text-left w-fit">Read more</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header scroll-fade-up">
-                <span class="badge">Our Services</span>
-                <h2>Comprehensive Care Modalities</h2>
-                <p>Tailored treatments designed to optimize your health from the cellular level up.</p>
-            </div>
-            <div class="services-grid">
-
-                <div class="service-card scroll-fade-up">
-                    <img src="https://flimc.com/wp-content/uploads/2025/05/1000000706-e1747607040168.jpg" alt="Primary Care" class="service-image">
-                    <div class="service-card-content">
-                        <h3>Primary Care</h3>
-                        <p>Comprehensive, proactive primary care that blends the best of conventional and holistic medicine for your everyday health needs.</p>
-                        <a href="mailto:Info@flimc.com" class="text-link">Learn more →</a>
-                    </div>
-                </div>
-
-                <div class="service-card scroll-fade-up delay-1">
-                    <img src="infusion-therapy.jpeg" alt="Infusion Therapies" class="service-image">
-                    <div class="service-card-content">
-                        <h3>Infusion Therapies</h3>
-                        <p>Advanced IV therapies delivering essential nutrients, antioxidants, and regenerative compounds directly into your bloodstream.</p>
-                        <a href="iv-therapies.html" class="text-link">Learn more →</a>
-                    </div>
-                </div>
-
-                <div class="service-card scroll-fade-up delay-2">
-                    <img src="wellness-week.jpeg" alt="Wellness Week" class="service-image">
-                    <div class="service-card-content">
-                        <h3>Wellness Week</h3>
-                        <p>An immersive, intensive week of curated therapies, diagnostics, and education to jumpstart your healing journey.</p>
-                        <a href="mailto:Info@flimc.com" class="text-link">Learn more →</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Therapies Section -->
-    <section id="therapies" class="services-section" style="background: var(--bg-primary);">
-        <div class="container">
-            <div class="section-header scroll-fade-up">
-                <span class="badge" style="color: var(--brand-gold); border-color: var(--brand-gold);">Therapies</span>
-                <h2 style="color: var(--text-primary);">Advanced Holistic Therapies</h2>
-            </div>
-            <div class="services-grid">
-
-                <div class="service-card scroll-fade-up" style="background: var(--glass-bg-dark);">
-                    <img src="https://flimc.com/wp-content/uploads/2026/01/ozone-scaled-e1769549335942.png" alt="Ozone Therapy" class="service-image">
-                    <div class="service-card-content">
-                        <h3>Ozone Therapy</h3>
-                        <div class="card-text-wrapper" style="padding: 0;">
-                            <div class="card-text-content collapsed">
-                                <p>Ozone therapy involves introducing ozone into the body with the intention of supporting oxygen levels and overall health. Discuss with your healthcare provider to assess its suitability for your health needs.</p>
+    <!-- Understanding the Difference: EBOO vs EBO2 -->
+    <section class="py-24 bg-white border-b border-slate-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Left: Content -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-space-900 mb-6 leading-tight">Understanding the Difference:<br><span class="text-apexteal-500">EBOO vs EBO₂</span></h2>
+                    <div class="w-24 h-1 bg-apexteal-500 mb-10 rounded-full"></div>
+                    <ul class="space-y-8">
+                        <li class="flex items-start gap-5 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:bg-apexteal-50 group-hover:border-apexteal-200 transition-all shadow-sm">
+                                <i class="fa-solid fa-filter text-slate-400 group-hover:text-apexteal-500 text-lg transition-colors"></i>
                             </div>
-                            <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card scroll-fade-up delay-1" style="background: var(--glass-bg-dark);">
-                    <img src="ubi.png" alt="UBI Therapy" class="service-image">
-                    <div class="service-card-content">
-                        <h3>UBI Therapy</h3>
-                        <div class="card-text-wrapper" style="padding: 0;">
-                            <div class="card-text-content collapsed">
-                                <p>Ultraviolet Blood Irradiation (UBI) is a gentle, non-pharmaceutical therapy that exposes a small amount of your blood to ultraviolet light before reintroducing it into the body. This process is believed to help support immune function, enhance circulation, and promote detoxification.</p>
+                            <div>
+                                <h4 class="font-bold text-space-900 text-xl mb-2 group-hover:text-apexteal-600 transition-colors">Filtration</h4>
+                                <p class="text-slate-600 leading-relaxed">EBO₂ incorporates advanced blood filtration as part of the procedure, while traditional EBOO focuses primarily on oxygenation and ozonation.</p>
                             </div>
-                            <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card scroll-fade-up delay-2" style="background: var(--glass-bg-dark);">
-                    <img src="eboo.png" alt="EBOO" class="service-image">
-                    <div class="service-card-content">
-                        <h3>EBOO</h3>
-                        <div class="card-text-wrapper" style="padding: 0;">
-                            <div class="card-text-content collapsed">
-                                <p>EBOO is an advanced blood filtration and ozone-based wellness therapy that combines extracorporeal circulation, oxygenation, and medical-grade ozone administration. Some individuals pursue EBOO as part of a personalized wellness plan designed to support overall health and well-being.</p>
+                        </li>
+                        <li class="flex items-start gap-5 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:bg-apexteal-50 group-hover:border-apexteal-200 transition-all shadow-sm">
+                                <i class="fa-solid fa-droplet text-slate-400 group-hover:text-apexteal-500 text-lg transition-colors"></i>
                             </div>
-                            <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card scroll-fade-up delay-3" style="background: var(--glass-bg-dark);">
-                    <img src="Ebo2.png" alt="EBO₂" class="service-image">
-                    <div class="service-card-content">
-                        <h3>EBO₂</h3>
-                        <div class="card-text-wrapper" style="padding: 0;">
-                            <div class="card-text-content collapsed">
-                                <p>EBO₂ builds upon these same core principles while incorporating an advanced high-performance blood filtration system. As blood continuously circulates through the extracorporeal circuit, it is filtered, oxygenated, and precisely exposed to medical-grade ozone before being returned to the body. This additional filtration component is designed to help reduce the burden of unwanted particles that may accumulate in the bloodstream while supporting healthy circulation, oxygen delivery, and overall physiological balance.</p>
+                            <div>
+                                <h4 class="font-bold text-space-900 text-xl mb-2 group-hover:text-apexteal-600 transition-colors">Blood Processing</h4>
+                                <p class="text-slate-600 leading-relaxed">EBO₂ is designed to process a larger volume of blood through a continuous filtration circuit during the session.</p>
                             </div>
-                            <button class="read-more-btn" onclick="toggleReadMore(this)">Read more</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Therapy Comparison Section -->
-    <section class="comparison-section" style="background: var(--gradient-dark); padding: 6rem 0;">
-        <div class="container">
-            <div class="therapies-diff scroll-fade-up">
-                <img src="EBOO%20VS%20EBO2.png" alt="Therapy Comparison" class="diff-image">
-                <div class="diff-content">
-                    <h3 style="color: #fff;">Understanding the Difference: EBOO vs EBO₂</h3>
-                    <ul style="color: rgba(255, 255, 255, 0.9);">
-                        <li><strong>Filtration:</strong> EBO₂ incorporates advanced blood filtration as part of the procedure, while traditional EBOO focuses primarily on oxygenation and ozonation.</li>
-                        <li><strong>Blood Processing:</strong> EBO₂ is designed to process a larger volume of blood through a continuous filtration circuit during the session.</li>
-                        <li><strong>Technology:</strong> EBO₂ utilizes a larger, more advanced extracorporeal filtration system capable of combining filtration, oxygenation, and ozonation into one continuous process.</li>
-                        <li><strong>Personalization:</strong> Both therapies are individualized and performed under physician supervision using customized protocols based on each patient's health history, wellness goals, and overall care plan.</li>
+                        </li>
+                        <li class="flex items-start gap-5 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:bg-apexteal-50 group-hover:border-apexteal-200 transition-all shadow-sm">
+                                <i class="fa-solid fa-microchip text-slate-400 group-hover:text-apexteal-500 text-lg transition-colors"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-space-900 text-xl mb-2 group-hover:text-apexteal-600 transition-colors">Technology</h4>
+                                <p class="text-slate-600 leading-relaxed">EBO₂ utilizes a larger, more advanced extracorporeal filtration system capable of combining filtration, oxygenation, and ozonation into one continuous process.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-5 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:bg-apexteal-50 group-hover:border-apexteal-200 transition-all shadow-sm">
+                                <i class="fa-solid fa-user-doctor text-slate-400 group-hover:text-apexteal-500 text-lg transition-colors"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-space-900 text-xl mb-2 group-hover:text-apexteal-600 transition-colors">Personalization</h4>
+                                <p class="text-slate-600 leading-relaxed">Both therapies are individualized and performed under physician supervision using customized protocols based on each patient's health history, wellness goals, and overall care plan.</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Conditions Section -->
-    <section class="conditions-section">
-        <div class="container scroll-fade-up">
-            <div class="conditions-wrapper">
-                <h2>Conditions We Commonly Evaluate</h2>
-                <div class="tags-container">
-                    <span class="tag">Autoimmune Disorders</span>
-                    <span class="tag">Lyme Disease</span>
-                    <span class="tag">Chronic Fatigue</span>
-                    <span class="tag">Mold Toxicity</span>
-                    <span class="tag">Digestive Issues</span>
-                    <span class="tag">Hormonal Imbalances</span>
-                    <span class="tag">Neurological Conditions</span>
-                    <span class="tag">Heavy Metal Toxicity</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How it Works Section -->
-    <section id="process" class="process-section">
-        <div class="container">
-            <div class="section-header scroll-fade-up">
-                <span class="badge">The Process</span>
-                <h2>Take Control of Your Health in 3 Simple Steps</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item scroll-fade-up">
-                    <div class="timeline-marker">1</div>
-                    <div class="timeline-content glass-card">
-                        <h3>Request an Appointment Today</h3>
-                        <p>Reach out to our patient care coordinators to schedule your initial comprehensive evaluation.</p>
-                    </div>
-                </div>
-                <div class="timeline-item scroll-fade-up delay-1">
-                    <div class="timeline-marker">2</div>
-                    <div class="timeline-content glass-card">
-                        <h3>Receive a Personalized Health Plan</h3>
-                        <p>After thorough diagnostics, we craft a targeted protocol unique to your biology and goals.</p>
-                    </div>
-                </div>
-                <div class="timeline-item scroll-fade-up delay-2">
-                    <div class="timeline-marker">3</div>
-                    <div class="timeline-content glass-card">
-                        <h3>Work Towards Improved Wellness</h3>
-                        <p>Partner with our medical team through ongoing support, dynamic treatments, and lifestyle adjustments.</p>
+                
+                <!-- Right: Image -->
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl group border-[4px] border-white ring-1 ring-slate-100">
+                        <div class="absolute inset-0 bg-apexteal-500/5 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
+                        <img src="EBOO%20VS%20EBO2.png" alt="EBOO vs EBO2 Comparison" class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-700">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial Slider Section -->
-    <section class="slider-section">
-        <div class="container">
-            <div class="section-header scroll-fade-up">
-                <span class="badge">Success Stories</span>
-                <h2>What Our Patients Say</h2>
+    <!-- Conditions Pill Grid (Concept) -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-space-900 rounded-[2rem] p-10 md:p-14 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-apexteal-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10">
+                    <div class="text-apexteal-400 font-bold uppercase tracking-widest text-sm mb-4">Conditions We Evaluate</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Getting to the root cause</h2>
+                    <p class="text-slate-300 mb-10 max-w-2xl text-lg">Care recommendations are individualized based on medical history, clinical findings, and diagnostic testing.</p>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Lyme & Tick-Borne Illness</div>
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Chronic Fatigue</div>
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Long COVID</div>
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Immune Challenges</div>
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Autoimmune Symptoms</div>
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Mold-Related Illness</div>
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Hormonal Imbalance</div>
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Digestive Health</div>
+                        <div class="px-6 py-3 rounded-full border border-slate-500/50 bg-white/5 text-white font-medium text-sm backdrop-blur-sm hover:bg-white/10 transition-colors">Healthy Aging</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Timeline (Concept) -->
+    <section class="py-24 bg-slate-50 overflow-hidden border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-16">
+                <!-- Left: Content/Timeline -->
+                <div class="lg:w-1/2">
+                    <div class="text-apexteal-500 font-bold uppercase tracking-widest text-sm mb-4">How It Works</div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-space-900 mb-12 leading-tight">Take control of your health in three steps</h2>
+                    
+                    <div class="relative pl-2">
+                        <!-- Vertical line -->
+                        <div class="absolute left-[19px] top-6 bottom-12 w-0.5 border-l-2 border-dashed border-apexteal-500/40"></div>
+                        
+                        <div class="relative pl-14 pb-12">
+                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-slate-50 border-2 border-apexteal-500 flex items-center justify-center font-serif font-bold text-apexteal-500 z-10 text-lg shadow-sm">1</div>
+                            <h3 class="text-2xl font-bold text-space-900 mb-3">Request an Appointment</h3>
+                            <p class="text-slate-600 leading-relaxed text-lg">Speak with our care team in Sarasota about your health concerns and wellness goals.</p>
+                        </div>
+                        
+                        <div class="relative pl-14 pb-12">
+                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-slate-50 border-2 border-apexteal-500 flex items-center justify-center font-serif font-bold text-apexteal-500 z-10 text-lg shadow-sm">2</div>
+                            <h3 class="text-2xl font-bold text-space-900 mb-3">Receive a Personalized Plan</h3>
+                            <p class="text-slate-600 leading-relaxed text-lg">We build a comprehensive plan using advanced diagnostics and natural health approaches tailored specifically to you.</p>
+                        </div>
+                        
+                        <div class="relative pl-14">
+                            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-slate-50 border-2 border-apexteal-500 flex items-center justify-center font-serif font-bold text-apexteal-500 z-10 text-lg shadow-sm">3</div>
+                            <h3 class="text-2xl font-bold text-space-900 mb-3">Work Toward Wellness</h3>
+                            <p class="text-slate-600 leading-relaxed text-lg">Our dedicated team supports you every step of the way as you pursue your health goals and optimize your vitality.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Image -->
+                <div class="lg:w-1/2 w-full mt-12 lg:mt-0">
+                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl group border-4 border-white ring-1 ring-slate-100">
+                        <img src="journey-photo.png" alt="Healthcare Journey" class="w-full h-auto min-h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Services -->
+    <section id="services" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-space-900 mb-4">Services</h2>
+                <div class="w-24 h-1 bg-apexteal-500 mx-auto"></div>
             </div>
 
-            <div class="slider-container-wrapper scroll-fade-up" style="position: relative; margin-top: 3rem;">
-                <!-- Left Arrow -->
-                <button class="slider-nav prev-arrow" onclick="scrollSlider(-1)" aria-label="Previous testimonial">❮</button>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center">
+                <!-- Primary Care -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-full h-64 overflow-hidden rounded-[2rem] shadow-md mb-8">
+                        <img src="1000000706-e1747607040168.jpg" alt="Primary Care" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-2xl font-bold text-space-900 mb-4">Primary Care</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm line-clamp-3 transition-all">
+                        At FLIMC, we understand that every patient’s story is unique. That’s why we provide personalized health assessments tailored to your needs. Our team is committed to listening, understanding, and walking beside you with compassionate care throughout your health journey.
+                    </p>
+                    <button onclick="this.previousElementSibling.classList.toggle('line-clamp-3'); this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';" class="text-apexteal-500 font-bold text-sm mt-3 hover:text-apexteal-600 transition-colors uppercase tracking-wider">Read more</button>
+                </div>
 
-                <div class="testimonial-slider" id="homeTestimonialSlider">
+                <!-- Infusion Therapies -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-full h-64 overflow-hidden rounded-[2rem] shadow-md mb-8">
+                        <img src="infusion-therapy.jpeg" alt="Infusion Therapies" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-2xl font-bold text-space-900 mb-4">Infusion Therapies</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm line-clamp-3 transition-all">
+                        Florida Integrative Medical Center in Sarasota offers a broad range of IV nutrient therapies designed to support optimal health and enhance overall wellness. These include high-dose Vitamin C, Myers’ Cocktail, NAD+, Hydrogen Peroxide IV, and many more customized nutrient blends.
+                    </p>
+                    <button onclick="this.previousElementSibling.classList.toggle('line-clamp-3'); this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';" class="text-apexteal-500 font-bold text-sm mt-3 hover:text-apexteal-600 transition-colors uppercase tracking-wider">Read more</button>
+                </div>
 
-                    <div class="slider-card">
-                        <div class="testimonial-quote-mark">"</div>
-                        <div class="testimonial-header">
-                            <img src="https://flimc.com/wp-content/uploads/2025/05/Courtney-340x340-1.webp" alt="Courtney H." class="testimonial-avatar">
-                            <p class="testimonial-author">Courtney H.</p>
+                <!-- Wellness Week -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-full h-64 overflow-hidden rounded-[2rem] shadow-md mb-8">
+                        <img src="wellness-week.jpeg" alt="Wellness Week" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-2xl font-bold text-space-900 mb-4">Wellness Week</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm line-clamp-3 transition-all">
+                        Experience a comprehensive Wellness Week at Florida Integrative Medical Center, where your health is our focus. Over the course of a week, our expert team conducts medical evaluations tailored to your needs. From diagnostics to consultations, our goal is to provide insights and personalized strategies to support your well-being.<br><br>Whether you are a local resident or flying in for a "wellness vacation," know that you and your health are our priority.
+                    </p>
+                    <button onclick="this.previousElementSibling.classList.toggle('line-clamp-3'); this.innerText = this.innerText === 'Read more' ? 'Read less' : 'Read more';" class="text-apexteal-500 font-bold text-sm mt-3 hover:text-apexteal-600 transition-colors uppercase tracking-wider">Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 7. Call to Action Banner -->
+    <section class="bg-apexteal-500 relative overflow-hidden">
+        <div class="absolute inset-0 bg-space-900/10 mix-blend-multiply"></div>
+        <!-- Decorative pattern -->
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight drop-shadow-md">
+                        Take Control of Your Health in 3 Simple Steps
+                    </h2>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="border-l-4 border-white/30 pl-6 flex flex-col items-start">
+                        <p class="text-2xl text-white font-bold leading-relaxed mb-2">Request an Appointment Today</p>
+                        <p class="text-white/90 mb-8 text-lg">Speak with our care team in Sarasota about your health concerns.</p>
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 font-bold text-apexteal-500 bg-white rounded-full hover:bg-slate-100 hover:shadow-lg transition-all duration-300 uppercase tracking-wider text-sm">
+                            Schedule My Consultation <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 9. Testimonials Section -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <section class="py-24 bg-space-900 relative overflow-hidden">
+        <i class="fa-solid fa-quote-left absolute top-12 left-1/2 transform -translate-x-1/2 text-9xl text-space-800 opacity-50 z-0"></i>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Patient Stories</h2>
+                <div class="w-24 h-1 bg-apexteal-500 mx-auto mb-10"></div>
+            </div>
+
+            <!-- Swiper Slider -->
+            <div class="swiper testimonial-swiper pb-12">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Testimonial 1: Courtney H. -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-space-800 p-8 rounded-2xl border border-space-700 hover:border-apexteal-500/50 transition-all duration-300 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex text-apexteal-400 mb-6 gap-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-slate-300 italic mb-6 leading-relaxed line-clamp-4">"Florida Integrative Medical Center gave me my life back. I’m not exaggerating. Before I came to FLIMC and got SOT, I was nearly bedridden. I couldn’t function and was suffering terribly from Lyme and co-infections..."</p>
+                            </div>
+                            <div>
+                            <div class="flex items-center gap-4">
+                                <img src="courtney.jpg" alt="Courtney H." class="w-12 h-12 rounded-full object-cover border-2 border-apexteal-500/30 shadow-sm">
+                                <div>
+                                    <p class="text-apexteal-400 font-bold uppercase tracking-wider text-xs mb-1">Courtney H.</p>
+                                    <a href="testimonials.html#courtney" class="text-white hover:text-apexteal-400 text-[10px] font-bold uppercase tracking-widest transition-colors">Read Full Story →</a>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        <blockquote class="testimonial-text">
-                            "Florida Integrative Medical Center gave me my life back. I'm not exaggerating. Before I came to FLIMC and got SOT, I was nearly bedridden. I couldn't function and was suffering terribly from Lyme and co-infections... I feel better than I have in YEARS. I'm functioning again. And I owe it all to FLIMC!"
-                        </blockquote>
                     </div>
 
-                    <div class="slider-card">
-                        <div class="testimonial-quote-mark">"</div>
-                        <div class="testimonial-header">
-                            <img src="https://flimc.com/wp-content/uploads/2025/06/Lori-B.webp" alt="Lori B." class="testimonial-avatar">
-                            <p class="testimonial-author">Lori B.</p>
+                    <!-- Testimonial 2: Lori B. -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-space-800 p-8 rounded-2xl border border-space-700 hover:border-apexteal-500/50 transition-all duration-300 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex text-apexteal-400 mb-6 gap-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-slate-300 italic mb-6 leading-relaxed line-clamp-4">"My name is Lori and I was diagnosed with late-stage Lyme in April 2007. After the initial diagnosis, I was fortunate to receive two months of Doxycycline and went into remission until 2010..."</p>
+                            </div>
+                            <div>
+                            <div class="flex items-center gap-4">
+                                <img src="lori.jpg" alt="Lori B." class="w-12 h-12 rounded-full object-cover border-2 border-apexteal-500/30 shadow-sm">
+                                <div>
+                                    <p class="text-apexteal-400 font-bold uppercase tracking-wider text-xs mb-1">Lori B.</p>
+                                    <a href="testimonials.html#lori" class="text-white hover:text-apexteal-400 text-[10px] font-bold uppercase tracking-widest transition-colors">Read Full Story →</a>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        <blockquote class="testimonial-text">
-                            "I was diagnosed with late-stage Lyme in April 2007... Four months post-SOT, I tested negative for Borrelia and all my symptoms disappeared. I'm now powerwalking, going to the gym, enjoying the sun, sleeping well... Thank you, FLIMC and Dr. Monhollon, for giving me my life back!"
-                        </blockquote>
                     </div>
 
-                    <div class="slider-card">
-                        <div class="testimonial-quote-mark">"</div>
-                        <div class="testimonial-header">
-                            <img src="https://flimc.com/wp-content/uploads/2025/05/prince-340x340-1.png" alt="Prince Matharu" class="testimonial-avatar">
-                            <p class="testimonial-author">Prince Matharu</p>
+                    <!-- Testimonial 3: Prince Matharu -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-space-800 p-8 rounded-2xl border border-space-700 hover:border-apexteal-500/50 transition-all duration-300 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex text-apexteal-400 mb-6 gap-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-slate-300 italic mb-6 leading-relaxed line-clamp-4">"My name is Prince Matharu, and I had been dealing with Lyme, mold toxicity, severe immune dysregulation, and tissue degeneration. I went from specialist to specialist without lasting relief..."</p>
+                            </div>
+                            <div>
+                            <div class="flex items-center gap-4">
+                                <img src="prince.jpg" alt="Prince Matharu" class="w-12 h-12 rounded-full object-cover border-2 border-apexteal-500/30 shadow-sm">
+                                <div>
+                                    <p class="text-apexteal-400 font-bold uppercase tracking-wider text-xs mb-1">Prince Matharu</p>
+                                    <a href="testimonials.html#prince" class="text-white hover:text-apexteal-400 text-[10px] font-bold uppercase tracking-widest transition-colors">Read Full Story →</a>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        <blockquote class="testimonial-text">
-                            "I went from specialist to specialist—from Western medicine to Chinese traditional medicine—without lasting relief. I discovered FLIMC while researching SOT treatments for Lyme... Everyone at FLIMC is friendly, caring, and focused on safety."
-                        </blockquote>
                     </div>
 
-                    <div class="slider-card">
-                        <div class="testimonial-quote-mark">"</div>
-                        <div class="testimonial-header">
-                            <img src="https://flimc.com/wp-content/uploads/2026/04/Linda-Beggs.jpg" alt="Linda Beggs" class="testimonial-avatar">
-                            <p class="testimonial-author">Linda Beggs</p>
+                    <!-- Testimonial 4: Linda Beggs -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-space-800 p-8 rounded-2xl border border-space-700 hover:border-apexteal-500/50 transition-all duration-300 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex text-apexteal-400 mb-6 gap-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-slate-300 italic mb-6 leading-relaxed line-clamp-4">"I just want to thank the expert team at Florida Integrative Medical Center for their great care. I am living life to the fullest again! I had been sick for several years..."</p>
+                            </div>
+                            <div>
+                            <div class="flex items-center gap-4">
+                                <img src="linda.jpg" alt="Linda Beggs" class="w-12 h-12 rounded-full object-cover border-2 border-apexteal-500/30 shadow-sm">
+                                <div>
+                                    <p class="text-apexteal-400 font-bold uppercase tracking-wider text-xs mb-1">Linda Beggs</p>
+                                    <a href="testimonials.html#linda" class="text-white hover:text-apexteal-400 text-[10px] font-bold uppercase tracking-widest transition-colors">Read Full Story →</a>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        <blockquote class="testimonial-text">
-                            "I just want to thank the expert team at Florida Integrative Medical Center for their great care. I am living life to the fullest again! When I first arrived at Florida Integrative Medical Center I was hopeless. Now I have my life back!"
-                        </blockquote>
-                    </div>
-
-                    <div class="slider-card">
-                        <div class="testimonial-quote-mark">"</div>
-                        <div class="testimonial-header">
-                            <img src="https://flimc.com/wp-content/uploads/2025/04/cropped-flimc-logo-170x-e1746037843962.png" alt="Agnieszka Gruszecka" class="testimonial-avatar">
-                            <p class="testimonial-author">Agnieszka Gruszecka</p>
-                        </div>
-                        <blockquote class="testimonial-text">
-                            "MIRACLE treatment was offered to me: EBOO! It is MY go-to treatment by itself but if combined with small amounts of Methylene blue IV... it is literally mind blowing. Please try it for yourself, it really works and you will feel better in your body and life."
-                        </blockquote>
                     </div>
 
                 </div>
-
-                <!-- Right Arrow -->
-                <button class="slider-nav next-arrow" onclick="scrollSlider(1)" aria-label="Next testimonial">❯</button>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;" class="scroll-fade-up">
-                <a href="testimonials.html" class="btn btn-primary">Read More Testimonials</a>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-next text-white"></div>
+                <div class="swiper-button-prev text-white"></div>
             </div>
         </div>
     </section>
 
     <script>
-        // Slider auto-scroll logic
-        const slider = document.getElementById('homeTestimonialSlider');
-        let scrollInterval;
-
-        function scrollSlider(direction) {
-            const cardWidth = slider.querySelector('.slider-card').offsetWidth + 32;
-            slider.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-
-            setTimeout(() => {
-                if (slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth - 10) && direction === 1) {
-                    slider.scrollTo({ left: 0, behavior: 'smooth' });
-                } else if (slider.scrollLeft <= 0 && direction === -1) {
-                    slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
-                }
-            }, 500);
-
-            resetInterval();
-        }
-
-        function startInterval() {
-            scrollInterval = setInterval(() => {
-                scrollSlider(1);
-            }, 5000);
-        }
-
-        function resetInterval() {
-            clearInterval(scrollInterval);
-            startInterval();
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            if(slider) {
-                startInterval();
-                slider.addEventListener('mouseenter', () => clearInterval(scrollInterval));
-                slider.addEventListener('mouseleave', () => startInterval());
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.testimonial-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
         });
     </script>
+    <style>
+        .swiper-pagination-bullet { background: rgba(255,255,255,0.3); }
+        .swiper-pagination-bullet-active { background: #5ac6d6; }
+        .swiper-button-next:after, .swiper-button-prev:after { font-size: 20px; font-weight: bold; }
+    </style>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq-section">
-        <div class="container">
-            <div class="section-header scroll-fade-up">
-                <span class="badge">FAQ</span>
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-accordion scroll-fade-up">
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is functional medicine?</span>
-                        <div class="icon">+</div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Functional medicine is a systems biology-based approach that focuses on identifying and addressing the root cause of disease. Each symptom or differential diagnosis may be one of many contributing to an individual's illness.</p>
+    <!-- 10. FAQ Section -->
+    <section class="py-24 bg-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-space-900 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="bg-white rounded-xl shadow-sm border border-slate-200 group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-space-900">
+                        What is functional medicine?
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-apexteal-500"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        Functional medicine looks beyond symptoms to understand underlying factors that may be affecting your health. At Florida Integrative Medical Center, this approach is paired with personalized care plans, diagnostics, and ongoing support.
                     </div>
-                </div>
+                </details>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What services does FLIMC offer?</span>
-                        <div class="icon">+</div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We offer a wide range of services including advanced functional lab testing, IV nutritional therapy, oxidative therapies, primary care, hyperbaric oxygen therapy, and custom nutritional counseling.</p>
+                <!-- FAQ 2 -->
+                <details class="bg-white rounded-xl shadow-sm border border-slate-200 group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-space-900">
+                        What services does FLIMC offer?
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-apexteal-500"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        FLIMC offers primary care, IV and infusion therapies, and Wellness Week programs designed to support individualized health and wellness goals.
                     </div>
-                </div>
+                </details>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What are infusion therapies?</span>
-                        <div class="icon">+</div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Infusion (IV) therapies involve administering vitamins, minerals, and other therapeutic compounds directly into the bloodstream for 100% absorption, bypassing the digestive system for immediate cellular benefit.</p>
+                <!-- FAQ 3 -->
+                <details class="bg-white rounded-xl shadow-sm border border-slate-200 group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-space-900">
+                        What are infusion therapies?
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-apexteal-500"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        Infusion therapies deliver nutrients directly into the bloodstream for efficient absorption. At FLIMC, services include options such as Vitamin C, Myers’ Cocktail, NAD+, and other customized nutrient blends based on individual needs.
                     </div>
-                </div>
+                </details>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is IV therapy safe?</span>
-                        <div class="icon">+</div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, when administered by qualified medical professionals. All of our IV protocols are meticulously formulated and overseen by our medical team to ensure safety, efficacy, and comfort.</p>
+                <!-- FAQ 4 -->
+                <details class="bg-white rounded-xl shadow-sm border border-slate-200 group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-space-900">
+                        What is Wellness Week?
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-apexteal-500"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        Wellness Week is a 5-day intensive program that includes consultation, lab testing, diagnostics, customized infusion therapy, and personalized care planning.
                     </div>
-                </div>
+                </details>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do I get started?</span>
-                        <div class="icon">+</div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Simply click the "Book Appointment" button to contact our office. Our intake team will guide you through the registration process and help schedule your initial consultation.</p>
+                <!-- FAQ 5 -->
+                <details class="bg-white rounded-xl shadow-sm border border-slate-200 group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-space-900">
+                        Is IV therapy safe?
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-apexteal-500"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        IV therapy is administered by trained medical professionals and guided by individual evaluation. Recommendations are made based on each patient’s needs.
                     </div>
-                </div>
+                </details>
 
+                <!-- FAQ 6 -->
+                <details class="bg-white rounded-xl shadow-sm border border-slate-200 group [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 font-bold text-lg text-space-900">
+                        How do I get started?
+                        <span class="transition group-open:rotate-180">
+                            <i class="fa-solid fa-chevron-down text-apexteal-500"></i>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        You can request a consultation through our website or contact our office directly to begin your care journey.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container scroll-fade-up">
-            <div class="cta-box">
-                <h2>Start Your Journey to Health Today</h2>
-                <p>Don't let chronic illness define your life. Discover the power of integrative medicine.</p>
-                <a href="mailto:Info@flimc.com" class="btn btn-gold btn-large">Schedule Consultation</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo-170x-e1746037843962.png" alt="FLIMC Logo">
+    <!-- 11. Footer -->
+    <footer id="contact">
+        <!-- Main Contact Bar (#5ac6d6) -->
+        <div class="bg-apexteal-400 pt-16 pb-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center">
+                    <!-- Logo -->
+                    <div class="mb-6 flex justify-center">
+                        <img src="logo.png" alt="Florida Integrative Medical Center" class="h-32 w-auto object-contain drop-shadow-md">
                     </div>
-                    <p>Florida Integrative Medical Center provides natural supplements and holistic health solutions, supporting your wellness journey with science-backed care and integrative therapies.</p>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>Have a question? Reach out to our team for an answer!</p>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-                        <div>
-                            <p>2415 University Parkway, Suite 218, Sarasota, Florida 34243, United States</p>
-                            <a href="https://g.co/kgs/5BnAE13" target="_blank">Directions</a>
+                    
+                    <!-- Social Media -->
+                    <div class="flex space-x-4 mb-8">
+                        <a href="https://www.facebook.com/FLIMC/" target="_blank" class="w-10 h-10 rounded-full bg-space-900 flex items-center justify-center text-white hover:bg-white hover:text-apexteal-500 transition-all shadow-md">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/flimcsarasota" target="_blank" class="w-10 h-10 rounded-full bg-space-900 flex items-center justify-center text-white hover:bg-white hover:text-apexteal-500 transition-all shadow-md">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <!-- Mission Statement -->
+                    <div class="max-w-3xl text-center mb-10">
+                        <p class="text-space-900 font-medium text-lg leading-relaxed italic">
+                            Florida Integrative Medical Center provides natural supplements and holistic health solutions, supporting your wellness journey with science-backed care and integrative therapies.
+                        </p>
+                    </div>
+
+                    <!-- Contact Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mt-4 border-t border-space-900/10 pt-10">
+                        <div class="text-center">
+                            <i class="fa-solid fa-phone text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Phone Number</h4>
+                            <p class="text-space-900 text-xl font-bold">(941) 955-6220</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-envelope text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Email Address</h4>
+                            <p class="text-space-900 font-bold text-lg cursor-pointer hover:text-white transition-colors">Info@flimc.com</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-location-dot text-space-900 text-2xl mb-4"></i>
+                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Office Location</h4>
+                            <p class="text-space-900 font-medium leading-relaxed">2415 University Parkway, Suite 218,<br>Sarasota, Florida 34243, United States</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                        <a href="tel:9419556220">(941) 955-6220</a>
-                    </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                        <a href="mailto:Info@flimc.com">Info@flimc.com</a>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 Florida Integrative Medical Center. All rights reserved.</p>
+        <!-- Copyright Footer (#047b8e) -->
+        <div class="bg-apexteal-500 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center text-sm text-white flex flex-col md:flex-row gap-3 items-center justify-center font-medium">
+                    <p>Copyright &copy; Flimc 2026. All rights reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Custom JS -->
-    <script src="script.js"></script>
 </body>
 </html>
