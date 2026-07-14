@@ -1,141 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UBI Therapy | FLIMC</title>
-    <meta name="description" content="Learn more about UBI Therapy at Florida Integrative Medical Center (FLIMC) in Sarasota, Florida.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>UBI Therapy | Florida Integrative Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            50: '#f4fbfc',
+                            100: '#eaf6f8',
+                            400: '#5ac6d6',
+                            500: '#38b2c6',
+                            600: '#047b8e',
+                            700: '#036170',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo.png" alt="FLIMC Logo">
-            </a>
-            <div class="nav-links">
-                <a href="about.html">About</a>
-                <a href="index.html#services">Services</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="https://flimc.myshopify.com/" target="_blank">Supplements</a>
-                <div class="dropdown" tabindex="0" onclick="this.classList.toggle('active')" onkeypress="if(event.key==='Enter') this.classList.toggle('active')">
-                    <a href="index.html#therapies" style="cursor: pointer;">Therapies</a>
-                    <div class="dropdown-menu">
-                        <a href="iv-therapies.html">IV & Infusion Therapies</a>
-                        <a href="ozone-therapy.html">Ozone Therapy</a>
-                        <a href="ubi-therapy.html">UBI Therapy</a>
-                        <a href="eboo-therapy.html">EBOO Therapy</a>
-                        <a href="ebo2-therapy.html">EBO&#8322; Therapy</a>
-                        <a href="eboo-vs-ebo2.html">EBOO vs EBO&#8322;</a>
-                    </div>
-                </div>
-                <a href="index.html#process">How it Works</a>
-                <a href="index.html#faq">FAQ</a>
-            </div>
-            <div class="nav-actions">
-                <a href="mailto:Info@flimc.com" class="btn btn-primary">Book Appointment</a>
-            </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-                        </nav>
-    <!-- Mobile Nav Overlay -->
-        <div class="mobile-nav">
-            <div class="mobile-nav-inner">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="index.html#services">Services</a>
-                <div class="dropdown" tabindex="0" onclick="this.classList.toggle('active')" onkeypress="if(event.key==='Enter') this.classList.toggle('active')">
-                    <a style="cursor: pointer;">Therapies</a>
-                    <div class="dropdown-menu">
-                        <a href="iv-therapies.html">IV & Infusion Therapies</a>
-                        <a href="ozone-therapy.html">Ozone Therapy</a>
-                        <a href="ubi-therapy.html">UBI Therapy</a>
-                        <a href="eboo-therapy.html">EBOO</a>
-                        <a href="ebo2-therapy.html">EBO&#8322;</a>
-                        <a href="eboo-vs-ebo2.html">EBOO vs EBO&#8322;</a>
-                    </div>
-                </div>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="index.html#process">How it Works</a>
-                <a href="index.html#faq">FAQ</a>
-                <a href="https://flimc.myshopify.com/" target="_blank">Supplements</a>
-                <a href="mailto:Info@flimc.com" class="btn btn-primary">Book Appointment</a>
-            </div>
-        </div>
+<body class="font-sans text-gray-800 antialiased bg-[#fcfdfd] flex flex-col min-h-screen">
 
-    <!-- Hero Section -->
-    <section class="page-hero-section">
-        <div class="container scroll-fade-up">
-            <h1 class="page-hero-title">UBI Therapy</h1>
-            <p class="page-hero-subtitle">Ultraviolet Blood Irradiation for immune support.</p>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="page-content-section">
-        <div class="container page-content-container">
-            <div class="glass-card scroll-fade-up page-glass-card">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="logow.png" alt="Florida Integrative Medical Center" class="h-24 md:h-28 w-auto py-2"></a>
+                </div>
                 
-                <h2 class="page-content-h2">UBI Therapy</h2>
-                <p class="page-content-p">
-                    Ultraviolet Blood Irradiation (UBI) is a gentle, non-pharmaceutical therapy that exposes a small amount of your blood to ultraviolet light before reintroducing it into the body. This process is believed to help support immune function, enhance circulation, and promote detoxification.
-                </p>
-                
-
-            </div>
-        </div>
-    </section>
-    
-<footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <img src="https://flimc.com/wp-content/uploads/2025/04/flimc-logo-170x-e1746037843962.png" alt="FLIMC Logo">
-                    </div>
-                    <p>Florida Integrative Medical Center provides natural supplements and holistic health solutions, supporting your wellness journey with science-backed care and integrative therapies.</p>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>Have a question? Reach out to our team for an answer!</p>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" ><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-                        <div>
-                            <p>2415 University Parkway, Suite 218, Sarasota, Florida 34243, United States</p>
-                            <a href="https://g.co/kgs/5BnAE13" target="_blank">Directions</a>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 text-[13px] font-bold text-gray-800 uppercase tracking-wider">
+                    <a href="index.html" class="hover:text-teal-500 transition">Home</a>
+                    <a href="conditions.html" class="hover:text-teal-500 transition">Conditions</a>
+                    
+                    <!-- Therapies Dropdown -->
+                    <div class="relative group py-2">
+                        <button class="hover:text-teal-500 transition flex items-center uppercase font-bold tracking-wider">
+                            Therapies <i class="fa-solid fa-chevron-down ml-1 text-[10px]"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="eboo.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">EBOO</a>
+                            <a href="ebo2.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">EBO2</a>
+                            <a href="ozone-therapy.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Ozone Therapy</a>
+                            <a href="ubi-therapy.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition rounded-b-md">UBI Therapy</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                        <a href="tel:9419556220">(941) 955-6220</a>
+
+                    <a href="index.html#primary-care" class="hover:text-teal-500 transition">Wellness</a>
+                    <a href="about.html" class="hover:text-teal-500 transition">About</a>
+                    <a href="testimonials.html" class="hover:text-teal-500 transition">Testimonials</a>
+                    <a href="https://flimc.myshopify.com/" target="_blank" class="hover:text-teal-500 transition">Supplements</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#contact-us" class="bg-teal-600 text-white font-bold py-2.5 px-5 rounded-md hover:bg-teal-700 transition uppercase tracking-wide text-sm text-center">Request an Appointment</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="bg-teal-600 text-white rounded-full p-2 h-10 w-10 flex items-center justify-center hover:bg-teal-700 transition">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0 top-full">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Home</a>
+                <a href="conditions.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Conditions</a>
+                
+                <!-- Therapies Section -->
+                <div class="block px-3 py-2 text-base font-bold text-gray-800 uppercase">Therapies</div>
+                <div class="pl-6 space-y-1">
+                    <a href="eboo.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">EBOO</a>
+                    <a href="ebo2.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">EBO2</a>
+                    <a href="ozone-therapy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Ozone Therapy</a>
+                    <a href="ubi-therapy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">UBI Therapy</a>
+                </div>
+
+                <a href="index.html#primary-care" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Wellness</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">About</a>
+                <a href="testimonials.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Testimonials</a>
+                <a href="https://flimc.myshopify.com/" target="_blank" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Supplements</a>
+                <a href="#contact-us" class="block mt-4 px-3 py-2 bg-teal-600 text-white rounded-md text-base font-bold text-center hover:bg-teal-700 uppercase">Request an Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="bg-teal-600 py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">UBI Therapy</h1>
+                <p class="text-teal-100 text-lg md:text-xl font-inter leading-relaxed max-w-2xl mx-auto">Ultraviolet Blood Irradiation</p>
+            </div>
+        </section>
+
+        <!-- Details -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    <div class="w-full md:w-1/2 flex justify-center">
+                        <img src="Photo with Gold Outline-12.jpg" alt="UBI Therapy" class="w-full max-w-md rounded-2xl shadow-xl">
                     </div>
-                    <div class="contact-item">
-                        <svg class="contact-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" ><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                        <a href="mailto:Info@flimc.com">Info@flimc.com</a>
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-3xl font-bold text-navy-900 mb-6">Promoting Detoxification</h2>
+                        <p class="text-gray-700 font-inter leading-relaxed mb-8 text-lg">
+                            Ultraviolet Blood Irradiation (UBI) is a gentle, non-pharmaceutical therapy that exposes a small amount of your blood to ultraviolet light before reintroducing it into the body. This process is believed to help support immune function, enhance circulation, and promote detoxification as part of a comprehensive wellness approach.
+                        </p>
+                        <a href="#contact-us" class="inline-block bg-teal-600 text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition shadow-md uppercase tracking-wide text-sm">Schedule a Consultation</a>
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#5ac6d6] pt-16 mt-auto" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
             
-            <div class="footer-bottom">
-                <p>&copy; 2026 Florida Integrative Medical Center. All rights reserved.</p>
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
+
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
+
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-black mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-white text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="bg-[#047b8e] py-4 text-center text-white text-sm">
+            Copyright © 2024 flimc | <a href="#" class="hover:underline text-gray-200">Privacy Policy</a> | <a href="#" class="hover:underline text-gray-200">Terms & Conditions</a>
         </div>
     </footer>
 
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+                const links = menu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
+
+
