@@ -1,210 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBO2 Therapy - Apex Antigravity & Recovery Center</title>
-    <meta name="description" content="EBOO (Extracorporeal Blood Oxygenation and Ozonation) integrative therapy at Florida Integrative Medical Center.">
+    <title>EBO2 Therapy | Florida Integrative Medical Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Outfit', sans-serif; }
-        .text-space-900 { color: #0f172a; }
-        .bg-space-900 { background-color: #0f172a; }
-        .bg-space-800 { background-color: #1e293b; }
-        .text-apexteal-400 { color: #5ac6d6; }
-        .bg-apexteal-500 { background-color: #047b8e; }
-        .border-space-700 { border-color: #334155; }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            50: '#f4fbfc',
+                            100: '#eaf6f8',
+                            400: '#5ac6d6',
+                            500: '#38b2c6',
+                            600: '#047b8e',
+                            700: '#036170',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="font-sans text-gray-800 antialiased bg-[#fcfdfd] flex flex-col min-h-screen">
 
     <!-- Header -->
-    <header class="bg-white border-b border-slate-200 py-4 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <!-- Logo -->
-            <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
-                <img src="logo.png" alt="Florida Integrative Medical Center" class="h-20 w-auto object-contain">
-            </a>
-            
-            <!-- Navigation (Desktop) -->
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="index.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Home</a>
-                <a href="index.html#services" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Services</a>
-                <a href="about.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">About</a>
-                <a href="testimonials.html" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Testimonials</a>
-                <div class="relative group">
-                    <a href="index.html#therapies" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide flex items-center gap-1">Therapies <i class="fa-solid fa-chevron-down text-xs"></i></a>
-                    <div class="absolute left-0 mt-4 w-48 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
-                        <a href="eboo.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBOO</a>
-                        <a href="ebo2.html" class="block px-4 py-2 text-sm text-apexteal-500 font-medium">EBO2</a>
-                        <a href="eboo-vs-ebo2.html" class="block px-4 py-2 text-sm text-slate-600 hover:text-apexteal-500 hover:bg-slate-50 font-medium">EBOO vs EBO2</a>
-                    </div>
+    <header class="w-full bg-white shadow-sm z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="logow.png" alt="Florida Integrative Medical Center" class="h-24 md:h-28 w-auto py-2"></a>
                 </div>
-                <a href="https://flimc.myshopify.com/" target="_blank" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Supplements</a>
-                <a href="index.html#contact" class="text-slate-600 hover:text-apexteal-500 font-bold transition-colors text-base uppercase tracking-wide">Contact</a>
-            </nav>
+                
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 text-[13px] font-bold text-gray-800 uppercase tracking-wider">
+                    <a href="index.html" class="hover:text-teal-500 transition">Home</a>
+                    <a href="conditions.html" class="hover:text-teal-500 transition">Conditions</a>
+                    
+                    <!-- Therapies Dropdown -->
+                    <div class="relative group py-2">
+                        <button class="hover:text-teal-500 transition flex items-center uppercase font-bold tracking-wider">
+                            Therapies <i class="fa-solid fa-chevron-down ml-1 text-[10px]"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-56 max-h-96 overflow-y-auto bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 custom-scrollbar">
+                            <a href="eboo.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">EBOO</a>
+                            <a href="ebo2.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">EBO2</a>
+                            <a href="ozone-therapy.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Ozone Therapy</a>
+                            <a href="ubi-therapy.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">UBI Therapy</a>
+                            <a href="vitamin-c.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Vitamin C</a>
+                            <a href="myers-cocktail.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Myers Cocktail</a>
+                            <a href="flu-defense.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Flu Defense</a>
+                            <a href="vitality.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Vitality</a>
+                            <a href="glutathione.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Glutathione</a>
+                            <a href="egcg.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">EGCG</a>
+                            <a href="migraine-defense.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Migraine Defense</a>
+                            <a href="chelation-therapy.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Chelation Therapy</a>
+                            <a href="ubi-with-ozone.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">UBI with Ozone</a>
+                            <a href="5-pass-ozone.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">5-Pass Ozone Therapy</a>
+                            <a href="iv-antibiotics.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">IV Antibiotics</a>
+                            <a href="iv-iron.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">IV Iron</a>
+                            <a href="silver-infusion.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition rounded-b-md">Silver Infusion</a>
+                        </div>
+                    </div>
 
-            <!-- Call to Action -->
-            <div class="hidden lg:flex items-center">
-                <span class="text-white font-bold text-lg bg-apexteal-500 px-6 py-3 rounded-full shadow-md shadow-apexteal-500/20 hover:bg-apexteal-400 transition-colors cursor-pointer">
-                    <i class="fa-solid fa-phone mr-2"></i> (941) 955-6220
-                </span>
-            </div>
-            
-                                                            <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button onclick="document.getElementById('mobile-menu').classList.remove('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.add('overflow-hidden');" class="text-space-900 hover:text-apexteal-500 focus:outline-none transition-all">
-                        <i class="fa-solid fa-bars text-3xl"></i>
+                    <a href="index.html#primary-care" class="hover:text-teal-500 transition">Wellness</a>
+                    <a href="about.html" class="hover:text-teal-500 transition">About</a>
+                    <a href="testimonials.html" class="hover:text-teal-500 transition">Testimonials</a>
+                    <a href="https://flimc.myshopify.com/" target="_blank" class="hover:text-teal-500 transition">Supplements</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#contact-us" class="bg-teal-600 text-white font-bold py-2.5 px-5 rounded-md hover:bg-teal-700 transition uppercase tracking-wide text-sm text-center">Request an Appointment</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="bg-teal-600 text-white rounded-full p-2 h-10 w-10 flex items-center justify-center hover:bg-teal-700 transition">
+                        <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0 top-full">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Home</a>
+                <a href="conditions.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Conditions</a>
+                
+                <!-- Therapies Section -->
+                <div class="block px-3 py-2 text-base font-bold text-gray-800 uppercase">Therapies</div>
+                <div class="pl-6 space-y-1 max-h-64 overflow-y-auto custom-scrollbar">
+                    <a href="eboo.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">EBOO</a>
+                    <a href="ebo2.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">EBO2</a>
+                    <a href="ozone-therapy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Ozone Therapy</a>
+                    <a href="ubi-therapy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">UBI Therapy</a>
+                    <a href="vitamin-c.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Vitamin C</a>
+                    <a href="myers-cocktail.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Myers Cocktail</a>
+                    <a href="flu-defense.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Flu Defense</a>
+                    <a href="vitality.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Vitality</a>
+                    <a href="glutathione.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Glutathione</a>
+                    <a href="egcg.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">EGCG</a>
+                    <a href="migraine-defense.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Migraine Defense</a>
+                    <a href="chelation-therapy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Chelation Therapy</a>
+                    <a href="ubi-with-ozone.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">UBI with Ozone</a>
+                    <a href="5-pass-ozone.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">5-Pass Ozone Therapy</a>
+                    <a href="iv-antibiotics.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">IV Antibiotics</a>
+                    <a href="iv-iron.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">IV Iron</a>
+                    <a href="silver-infusion.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Silver Infusion</a>
+                </div>
+
+                <a href="index.html#primary-care" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Wellness</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">About</a>
+                <a href="testimonials.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Testimonials</a>
+                <a href="https://flimc.myshopify.com/" target="_blank" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Supplements</a>
+                <a href="#contact-us" class="block mt-4 px-3 py-2 bg-teal-600 text-white rounded-md text-base font-bold text-center hover:bg-teal-700 uppercase">Request an Appointment</a>
+            </div>
+        </div>
     </header>
-        
-    <!-- 10x Better Mobile Menu (Centered Modal) -->
-    <div id="mobile-menu" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none scale-95 transition-all duration-300 md:hidden">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-space-900/80 backdrop-blur-md" onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');"></div>
-        
-        <!-- Menu Card -->
-        <div class="relative w-full max-w-sm bg-white rounded-[2rem] shadow-2xl p-6 md:p-8 overflow-hidden">
-            <!-- Decorative Shapes in Background -->
-            <div class="absolute -top-16 -right-16 w-48 h-48 bg-apexteal-300/30 rounded-full blur-2xl pointer-events-none"></div>
-            <div class="absolute -bottom-16 -left-16 w-48 h-48 bg-apexteal-500/20 rounded-full blur-2xl pointer-events-none"></div>
-            
-            <!-- Close Button -->
-            <button onclick="document.getElementById('mobile-menu').classList.add('opacity-0', 'pointer-events-none', 'scale-95'); document.body.classList.remove('overflow-hidden');" class="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-apexteal-50 hover:text-apexteal-500 transition-colors z-10 border border-slate-100 shadow-sm">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-            
-            <!-- Links -->
-            <div class="flex flex-col items-center gap-4 md:gap-5 relative z-10 mt-2">
-                <a href="index.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Home</a>
-                <a href="index.html#services" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Services</a>
-                <a href="about.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">About</a>
-                
-                <!-- Therapies Accordion/Group (Compact) -->
-                <div class="flex flex-col items-center gap-2 md:gap-3 bg-slate-50/80 backdrop-blur-sm w-full py-3 rounded-2xl border border-slate-100/50 shadow-inner">
-                    <span class="text-xs font-bold text-apexteal-500 uppercase tracking-widest">Therapies</span>
-                    <a href="eboo.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO</a>
-                    <a href="ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBO2</a>
-                    <a href="eboo-vs-ebo2.html" class="text-lg font-medium text-slate-600 hover:text-apexteal-500 transition-colors">EBOO vs EBO2</a>
-                </div>
-                
-                <a href="testimonials.html" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Testimonials</a>
-                <a href="https://flimc.myshopify.com/" target="_blank" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Shop</a>
-                <a href="index.html#contact" class="text-xl font-bold text-space-900 hover:text-apexteal-500 transition-colors">Contact</a>
-                
-                <!-- CTA -->
-                <a href="tel:9419556220" class="mt-1 w-full flex items-center justify-center gap-2 bg-apexteal-500 text-white font-bold py-3 md:py-4 rounded-xl shadow-lg shadow-apexteal-500/30 hover:bg-apexteal-600 transition-all">
-                    <i class="fa-solid fa-phone"></i> (941) 955-6220
-                </a>
+
+    <!-- Content -->
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="bg-teal-600 py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">EBO2 Therapy</h1>
+                <p class="text-teal-100 text-lg md:text-xl font-inter leading-relaxed max-w-2xl mx-auto">Advanced Blood Filtration Protocol</p>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Hero Section -->
-    <section class="py-16 bg-space-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">EBO2 Therapy</h1>
-            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Extracorporeal Blood Oxygenation and Ozonation</p>
-        </div>
-    </section>
+        <!-- Details -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <img src="Photo with Gold Outline-07.jpg" alt="EBO2 Therapy" class="w-full h-auto rounded-3xl shadow-2xl mb-12">
+                
+                <div class="prose prose-lg text-gray-700 font-inter max-w-none">
+                    <p class="mb-6">
+                        <strong>EBO₂ (Extracorporeal Blood Oxygenation & Ozonation)</strong> is an advanced, physician-guided wellness therapy that combines blood filtration, oxygenation, and medical-grade ozone as part of a personalized integrative care plan. During the procedure, blood is continuously circulated through a specialized extracorporeal system where it passes through a high-performance filter before being enriched with oxygen and precisely administered medical-grade ozone. The blood is then returned to the body in a continuous cycle throughout the session.
+                    </p>
+                    <p class="mb-8">
+                        This multi-step process is designed to support the body’s natural physiological functions by helping optimize oxygen delivery, encourage healthy circulation, and reduce the burden of unwanted particles that may accumulate in the bloodstream. By combining filtration with oxygenation and ozone, EBO₂ provides a comprehensive approach to supporting overall wellness.
+                    </p>
 
-    <!-- Main Content -->
-    <section class="py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100 prose prose-lg text-slate-700 max-w-none">
-                <img src="eboo.png" alt="EBO2 Therapy" class="w-full h-auto rounded-2xl mb-10 shadow-md">
-                
-                <p><strong>EBO₂ (Extracorporeal Blood Oxygenation & Ozonation)</strong> is an advanced, physician-guided wellness therapy that combines blood filtration, oxygenation, and medical-grade ozone as part of a personalized integrative care plan. During the procedure, blood is continuously circulated through a specialized extracorporeal system where it passes through a high-performance filter before being enriched with oxygen and precisely administered medical-grade ozone. The blood is then returned to the body in a continuous cycle throughout the session.</p>
-                
-                <p>This multi-step process is designed to support the body’s natural physiological functions by helping optimize oxygen delivery, encourage healthy circulation, and reduce the burden of unwanted particles that may accumulate in the bloodstream. By combining filtration with oxygenation and ozone, EBO₂ provides a comprehensive approach to supporting overall wellness.</p>
-                
-                <h3 class="text-2xl font-bold text-space-900 mt-10 mb-6">Many patients choose EBO₂ as part of their wellness program to support:</h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>Healthy circulation and vascular wellness</span></div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>Oxygen delivery throughout the body</span></div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>Advanced blood filtration</span></div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>Cellular wellness and energy production</span></div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>Healthy immune system function</span></div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>A balanced inflammatory response</span></div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>Healthy detoxification pathways</span></div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>Overall vitality and healthy aging</span></div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-check text-apexteal-500 mt-1"></i> <span>Recovery from everyday physical and environmental stressors</span></div>
-                </div>
+                    <div class="bg-teal-50 rounded-2xl p-8 mb-8 border border-teal-100">
+                        <h3 class="text-2xl font-bold text-navy-900 mb-6">Many patients choose EBO₂ as part of their wellness program to support:</h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> Healthy circulation and vascular wellness</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> Oxygen delivery throughout the body</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> Advanced blood filtration</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> Cellular wellness and energy production</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> Healthy immune system function</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> A balanced inflammatory response</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> Healthy detoxification pathways</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> Overall vitality and healthy aging</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-teal-500 mt-1 mr-3"></i> Recovery from everyday stressors</li>
+                        </ul>
+                    </div>
 
-                <p>Every EBO₂ session is performed under physician supervision using specialized medical equipment and individualized protocols based on each patient’s health history, wellness goals, and overall care plan. Because every individual is different, your provider will determine whether EBO₂ may be an appropriate addition to your personalized wellness program.</p>
+                    <p class="mb-10 text-lg">
+                        Every EBO₂ session is performed under physician supervision using specialized medical equipment and individualized protocols based on each patient’s health history, wellness goals, and overall care plan. Because every individual is different, your provider will determine whether EBO₂ may be an appropriate addition to your personalized wellness program.
+                    </p>
 
-                <div class="bg-apexteal-50 p-6 rounded-xl border border-apexteal-200 mt-10">
-                    <p class="font-medium text-space-900 mb-0">If you’re interested in learning whether EBO₂ may be an appropriate option for your wellness journey, <a href="index.html#contact" class="text-apexteal-600 font-bold underline">schedule a consultation</a> with our team to discuss your health goals and discover how this innovative therapy may support your body’s natural ability to thrive.</p>
+                    <div class="text-center">
+                        <a href="#contact-us" class="inline-block bg-teal-600 text-white font-bold py-4 px-10 rounded-md hover:bg-teal-700 transition shadow-lg uppercase tracking-wide">Schedule a Consultation</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer id="contact">
-        <!-- Main Contact Bar (#5ac6d6) -->
-        <div class="bg-apexteal-400 pt-16 pb-12">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col items-center">
-                    <!-- Logo -->
-                    <div class="mb-6 flex justify-center">
-                        <img src="logo.png" alt="Florida Integrative Medical Center" class="h-32 w-auto object-contain drop-shadow-md">
-                    </div>
-                    
-                    <!-- Social Media -->
-                    <div class="flex space-x-4 mb-8">
-                        <a href="https://www.facebook.com/FLIMC/" target="_blank" class="w-10 h-10 rounded-full bg-space-900 flex items-center justify-center text-white hover:bg-white hover:text-apexteal-500 transition-all shadow-md">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/flimcsarasota" target="_blank" class="w-10 h-10 rounded-full bg-space-900 flex items-center justify-center text-white hover:bg-white hover:text-apexteal-500 transition-all shadow-md">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
+    <footer class="bg-[#5ac6d6] pt-16 mt-auto" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
 
-                    <!-- Mission Statement -->
-                    <div class="max-w-3xl text-center mb-10">
-                        <p class="text-space-900 font-medium text-lg leading-relaxed italic">
-                            Florida Integrative Medical Center provides natural supplements and holistic health solutions, supporting your wellness journey with science-backed care and integrative therapies.
-                        </p>
-                    </div>
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
 
-                    <!-- Contact Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mt-4 border-t border-space-900/10 pt-10">
-                        <div class="text-center">
-                            <i class="fa-solid fa-phone text-space-900 text-2xl mb-4"></i>
-                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Phone Number</h4>
-                            <p class="text-space-900 text-xl font-bold">(941) 955-6220</p>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-envelope text-space-900 text-2xl mb-4"></i>
-                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Email Address</h4>
-                            <p class="text-space-900 font-bold text-lg cursor-pointer hover:text-white transition-colors">Info@flimc.com</p>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-location-dot text-space-900 text-2xl mb-4"></i>
-                            <h4 class="text-space-900 font-bold uppercase tracking-widest text-sm mb-2">Office Location</h4>
-                            <p class="text-space-900 font-medium leading-relaxed">2415 University Parkway, Suite 218,<br>Sarasota, Florida 34243, United States</p>
-                        </div>
-                    </div>
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-black mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-white text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
                 </div>
             </div>
         </div>
 
-        <!-- Copyright Footer (#047b8e) -->
-        <div class="bg-apexteal-500 py-6">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center text-sm text-white flex flex-col md:flex-row gap-3 items-center justify-center font-medium">
-                    <p>Copyright &copy; Flimc 2026. All rights reserved.</p>
-                </div>
-            </div>
+        <!-- Copyright -->
+        <div class="bg-[#047b8e] py-4 text-center text-white text-sm">
+            Copyright © 2024 flimc | <a href="#" class="hover:underline text-gray-200">Privacy Policy</a> | <a href="#" class="hover:underline text-gray-200">Terms & Conditions</a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+                const links = menu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
+
+
+

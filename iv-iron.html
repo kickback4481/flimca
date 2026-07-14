@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IV Iron | Florida Integrative Medical Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        teal: {
+                            50: '#f4fbfc',
+                            100: '#eaf6f8',
+                            400: '#5ac6d6',
+                            500: '#38b2c6',
+                            600: '#047b8e',
+                            700: '#036170',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-[#fcfdfd] flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="logow.png" alt="Florida Integrative Medical Center" class="h-24 md:h-28 w-auto py-2"></a>
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 text-[13px] font-bold text-gray-800 uppercase tracking-wider">
+                    <a href="index.html" class="hover:text-teal-500 transition">Home</a>
+                    <a href="conditions.html" class="hover:text-teal-500 transition">Conditions</a>
+                    
+                    <!-- Therapies Dropdown -->
+                    <div class="relative group py-2">
+                        <button class="hover:text-teal-500 transition flex items-center uppercase font-bold tracking-wider">
+                            Therapies <i class="fa-solid fa-chevron-down ml-1 text-[10px]"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-48 bg-white border border-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="eboo.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">EBOO</a>
+                            <a href="ebo2.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">EBO2</a>
+                            <a href="ozone-therapy.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition border-b border-gray-50">Ozone Therapy</a>
+                            <a href="ubi-therapy.html" class="block px-4 py-3 text-[12px] text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition rounded-b-md">UBI Therapy</a>
+                        </div>
+                    </div>
+
+                    <a href="index.html#primary-care" class="hover:text-teal-500 transition">Wellness</a>
+                    <a href="about.html" class="hover:text-teal-500 transition">About</a>
+                    <a href="testimonials.html" class="hover:text-teal-500 transition">Testimonials</a>
+                    <a href="https://flimc.myshopify.com/" target="_blank" class="hover:text-teal-500 transition">Supplements</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#contact-us" class="bg-teal-600 text-white font-bold py-2.5 px-5 rounded-md hover:bg-teal-700 transition uppercase tracking-wide text-sm text-center">Request an Appointment</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="bg-teal-600 text-white rounded-full p-2 h-10 w-10 flex items-center justify-center hover:bg-teal-700 transition">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0 top-full">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Home</a>
+                <a href="conditions.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Conditions</a>
+                
+                <!-- Therapies Section -->
+                <div class="block px-3 py-2 text-base font-bold text-gray-800 uppercase">Therapies</div>
+                <div class="pl-6 space-y-1">
+                    <a href="eboo.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">EBOO</a>
+                    <a href="ebo2.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">EBO2</a>
+                    <a href="ozone-therapy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">Ozone Therapy</a>
+                    <a href="ubi-therapy.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-teal-500 hover:bg-gray-50 uppercase">UBI Therapy</a>
+                </div>
+
+                <a href="index.html#primary-care" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Wellness</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">About</a>
+                <a href="testimonials.html" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Testimonials</a>
+                <a href="https://flimc.myshopify.com/" target="_blank" class="block px-3 py-2 rounded-md text-base font-bold text-gray-800 hover:text-teal-500 hover:bg-gray-50 uppercase">Supplements</a>
+                <a href="#contact-us" class="block mt-4 px-3 py-2 bg-teal-600 text-white rounded-md text-base font-bold text-center hover:bg-teal-700 uppercase">Request an Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="bg-teal-600 py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">IV Iron</h1>
+                <p class="text-teal-100 text-lg md:text-xl font-inter leading-relaxed max-w-2xl mx-auto">Restore Energy</p>
+            </div>
+        </section>
+
+        <!-- Details -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-navy-900 mb-6">Discover the Benefits of IV Iron</h2>
+                <p class="text-gray-700 font-inter leading-relaxed mb-8 text-lg">
+                    NAD+ (Nicotinamide Adenine Dinucleotide) is a critical coenzyme found in every cell of your body. Our IV Iron is designed to support healthy aging, cognitive function, and cellular energy production. Contact us to learn if this therapy is right for you.
+                </p>
+                <a href="#contact-us" class="inline-block bg-teal-600 text-white font-bold py-3 px-8 rounded-md hover:bg-teal-700 transition shadow-md uppercase tracking-wide text-sm">Schedule a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#5ac6d6] pt-16 mt-auto" id="contact-us">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo -->
+            <img src="logow.png" alt="FLIMC Logo" class="h-40 w-auto object-contain mb-10 hover:scale-105 transition duration-300 drop-shadow-md">
+            
+            <!-- Social Icons -->
+            <div class="flex space-x-4 mb-6">
+                <a href="https://www.facebook.com/FLIMC/" target="_blank" rel="noopener noreferrer" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/flimcsarasota/" target="_blank" rel="noopener noreferrer" class="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-800 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Contact Text -->
+            <p class="text-white text-xl font-medium mb-12 text-center">Have a question? Reach out to our team for an answer!</p>
+
+            <!-- Contact & Location -->
+            <div class="flex flex-col md:flex-row justify-center w-full gap-12 md:gap-32 text-center text-black mb-16">
+                <div>
+                    <p class="text-2xl font-black mb-2">(941) 955-6220</p>
+                    <p class="text-2xl font-black">Info@flimc.com</p>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">Office Location</p>
+                    <p class="text-white text-lg">2415 University Pkwy,<br>Sarasota, FL 34243</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="bg-[#047b8e] py-4 text-center text-white text-sm">
+            Copyright © 2024 flimc | <a href="#" class="hover:underline text-gray-200">Privacy Policy</a> | <a href="#" class="hover:underline text-gray-200">Terms & Conditions</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                });
+                const links = menu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
